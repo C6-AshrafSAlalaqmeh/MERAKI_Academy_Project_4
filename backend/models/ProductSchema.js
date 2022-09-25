@@ -4,8 +4,10 @@ const productSchema = new mongoose.Schema(
     {
         nameFood :{type : String , required : true},
         avarage :{type : Number},
-        img : {type : img},
-        listId : [{type : mongoose.Schema.Types.ObjectId , ref:'List' }]
+        img : {type : String},
+        Ingredients:{type : String},
+        Method : {type :String} ,
+        listId : {type : mongoose.Schema.Types.ObjectId , ref:'List' }
     }
 )
 
