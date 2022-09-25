@@ -1,9 +1,9 @@
 const listModel = require('../models/ListSchema')
 
 const createListFood = (req ,res)=>{
-    const {typeFoode , img} = req.body ;
+    const {typeFood , img} = req.body ;
     const listInstance = new listModel({
-        typeFoode,
+        typeFood,
         img
 
     })
