@@ -23,7 +23,7 @@ res.json({success: true ,message: "Success Operation" , Product :result })
 
 const getProductByName =(req , res)=>{
     const productName = req.query.name
-    porductModel.find({})
+    porductModel.find({nameFood:productName})
     .then((result)=>{
         res.status(200)
         res.json({success: true , message: `The product with name⇾ ${productName}`,product:result })
