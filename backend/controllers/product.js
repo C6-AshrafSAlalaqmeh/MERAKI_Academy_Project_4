@@ -1,11 +1,12 @@
 const porductModel = require('../models/ProductSchema')
 
 const createNewProduct =(req , res) =>{
-    const {nameFood , avarage ,img ,Ingredients , Method ,listid}=req.body
+    const {nameFood , avarage ,img ,short_desc,Ingredients , Method ,listid}=req.body
     const productInstance = new porductModel({
         nameFood,
         avarage ,
         img ,
+        short_desc ,
         Ingredients ,
         Method ,
         listid
@@ -41,6 +42,17 @@ const getProductByName =(req , res)=>{
     })
 }
 
+const updateproduct = (req ,res)=>{
+    const productId = req.params.id
+    const {nameFood ,avarage ,short_desc }= req.body
+    porductModel.findOneAndUpdate({_id : productId} , {nameFood , avarage ,short_desc} , {new : true})
+    .then((result)=>{
+   console.log(result)
+    })
+    .catch((err)=>{
+console.log(err)
+    })
+}
 
 
-module.exports = { createNewProduct , getProductByName }
+module.exports = { createNewProduct , getProductByName ,updateproduct}
