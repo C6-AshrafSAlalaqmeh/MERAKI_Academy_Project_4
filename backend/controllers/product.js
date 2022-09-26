@@ -54,5 +54,16 @@ console.log(err)
     })
 }
 
+const deleteProduct = (req , res)=>{
+    const productId = req.params.id
+    porductModel.findOneAndDelete({_id:productId})
+    .then(()=>{
+        console.log("Removed")
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+}
 
-module.exports = { createNewProduct , getProductByName ,updateproduct}
+
+module.exports = { createNewProduct , getProductByName ,updateproduct ,deleteProduct}
