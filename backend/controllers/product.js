@@ -23,11 +23,17 @@ res.json({success: true ,message: "Success Operation" , Product :result })
 
 const getProductByName =(req , res)=>{
     const productName = req.query.name
-    porductModel.find({nameFood:productName})
+    porductModel.find({nameFood : productName})
     .then((result)=>{
+        console.log(result)
+        if(!result.length){
+        res.status(404)
+        res.json({success: false , message: `The product is not found`})
+        }
+        else{
         res.status(200)
-        res.json({success: true , message: `The product with name⇾ ${productName}`,product:result })
-
+        res.json({success:true , message: `The product with name⇾ ${productName}`,product:result })
+        }
     })
     .catch((err)=>{
         res.status(500)
