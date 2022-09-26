@@ -13,7 +13,7 @@ const productRouter = express.Router();
 
 productRouter.post("/",authentication,authorization("write"), createNewProduct);
 productRouter.get("/search", getProductByName);
-productRouter.get("/" , getAllproduct)
+productRouter.get("/" , authentication,getAllproduct)
 productRouter.put("/:id", updateproduct);
 productRouter.delete("/:id" , deleteProduct )
 module.exports = productRouter;
