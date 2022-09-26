@@ -13,12 +13,14 @@ app.use(express.json());
 // Import Routers
 const listRouter = require('./routes/list')
 const productRouter= require('./routes/product')
-const userRouter = require('./routes/register')
+const userRouter = require('./routes/user')
+const RoleRouter = require('./routes/role')
 
 // Routes Middleware
 app.use('/list' ,listRouter)
 app.use('/product' ,productRouter)
 app.use('/user' ,userRouter)
+app.use('/role', RoleRouter)
 
 // Handles any other endpoints [unassigned - endpoints]
 app.use("*", (req, res) => res.status(404).json("NO content at this path"));

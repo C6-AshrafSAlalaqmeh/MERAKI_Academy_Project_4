@@ -22,6 +22,16 @@ res.json({success: true ,message: "Success Operation" , Product :result })
     })
 }
 
+const getAllproduct = (req ,res)=>{
+    porductModel.find({})
+    .then((result)=>{
+     res.status(201).json({product : result})
+    })
+    .catch((err)=>{
+     res.status(400).json(err)
+    })
+}
+
 const getProductByName =(req , res)=>{
     const productName = req.query.name
     porductModel.find({nameFood : productName})
@@ -66,4 +76,4 @@ const deleteProduct = (req , res)=>{
 }
 
 
-module.exports = { createNewProduct , getProductByName ,updateproduct ,deleteProduct}
+module.exports = { createNewProduct ,getAllproduct, getProductByName ,updateproduct ,deleteProduct}

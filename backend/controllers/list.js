@@ -17,4 +17,15 @@ console.log(err)
     })
 }
 
-module.exports ={createListFood}
+
+const getAllList =(req ,res)=>{
+    listModel.find({})
+    .then((result)=>{
+     res.status(201).json({list : result})
+    })
+    .catch((err)=>{
+
+    })
+}
+
+module.exports ={createListFood ,getAllList}
