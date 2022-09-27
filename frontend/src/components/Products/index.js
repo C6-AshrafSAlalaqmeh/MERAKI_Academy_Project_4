@@ -1,10 +1,20 @@
+import axios from "axios"
 
 
-const Products = ()=>{
+const Products = ({listid})=>{
+    console.log(listid)
+   
+   
+    const getProduct =()=>{
+        axios.get('')
+    }
+
+
+
     return (
         <>
         <h1>Products</h1>
-        
+
         </>
     )
 }

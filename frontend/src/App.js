@@ -14,6 +14,7 @@ function App() {
 const [ShowHome , setShoeHome]= useState(true)
 const [showNavbar , setshowNavbar]= useState(false)
 const[token , setToken]=useState("")
+const [listid , setListId]= useState("")
 
 
   return (
@@ -23,8 +24,8 @@ const[token , setToken]=useState("")
       <Routes>
     <Route path="/login" element={<Login setShoeHome={setShoeHome} setshowNavbar={setshowNavbar} setToken={setToken} />}/>
     <Route path="/register" element={<Register setShoeHome={setShoeHome}/>}/>
-    <Route path="/list" element={<List token={token} />}/>
-    <Route path="/product" element={<Products/>}/>
+    <Route path="/list" element={<List token={token} setListId={setListId} />}/>
+    <Route path="/product" element={<Products listid={listid}/>}/>
       </Routes>
     </div>
   );

@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const List = ({ token }) => {
+const List = ({ token , setListId }) => {
   const [lists, setList] = useState([]);
   const navigate = useNavigate();
 
@@ -15,8 +15,9 @@ const List = ({ token }) => {
       })
       .then((result) => {
 
-        console.log(result);
+        console.log(result.data.list[0]._id);
         setList(result.data.list);
+        
       })
       .catch((err) => {
         console.log(err);
@@ -31,9 +32,10 @@ const List = ({ token }) => {
       <hi>List </hi>
       {lists.length &&
         lists.map((elem) => {
+            
           return (
             <>
-              <h1 onClick={() => navigate("/product")}>{elem.typeFood}</h1>
+              <h1 onClick={() =>{ navigate("/product");setListId(elem._id) }}>{elem.typeFood}</h1>
               <p>{elem.img}</p>
             </>
           );
