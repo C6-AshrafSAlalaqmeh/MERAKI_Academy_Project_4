@@ -16,17 +16,17 @@ const [ShowHome , setShoeHome]= useState(true)
 const [showNavbar , setshowNavbar]= useState(false)
 const[token , setToken]=useState("")
 const [listidOriginal , setListIdOriginal]= useState("")
-
+const [showcreateProduct , setShowCreateProduct]= useState(false)
 
   return (
     <div className="App">
-      <Navbar showNavbar={showNavbar}/>
+      <Navbar showNavbar={showNavbar} showcreateProduct={showcreateProduct} setShowCreateProduct={setShowCreateProduct} />
      {ShowHome && <Home/>}
       <Routes>
     <Route path="/login" element={<Login setShoeHome={setShoeHome} setshowNavbar={setshowNavbar} setToken={setToken} />}/>
     <Route path="/register" element={<Register setShoeHome={setShoeHome}/>}/>
     <Route path="/list" element={<List token={token} setListIdOriginal={setListIdOriginal} />}/>
-    <Route path="/product" element={<Products listidOriginal={listidOriginal}/>}/>
+    <Route path="/product" element={<Products listidOriginal={listidOriginal} setShowCreateProduct={setShowCreateProduct} showcreateProduct={showcreateProduct}/>}/>
     <Route path="/detalis" element={<Detalis/>}/>
       </Routes>
     </div>

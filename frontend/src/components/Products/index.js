@@ -3,7 +3,8 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 
-const Products = ({listidOriginal})=>{
+const Products = ({listidOriginal ,setShowCreateProduct})=>{
+    setShowCreateProduct(true)
     const [Products , setProducts]=useState([])
     console.log(listidOriginal)
    
@@ -32,7 +33,7 @@ const Products = ({listidOriginal})=>{
             if(listidOriginal === elem.listId){
              return (
                  <>
-                <p onClick={()=>{ navigate('/detalis')}}>{elem.nameFood}</p>
+                <p onClick={()=>{ navigate('/detalis') ;setShowCreateProduct(false) }}>{elem.nameFood}</p>
                 <p>{elem.avarage}</p>
                 <p>{elem.img}</p>
                    </>
