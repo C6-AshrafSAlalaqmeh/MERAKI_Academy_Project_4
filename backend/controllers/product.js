@@ -1,7 +1,7 @@
 const porductModel = require('../models/ProductSchema')
 
 const createNewProduct =(req , res) =>{
-    const {nameFood , avarage ,img ,short_desc,Ingredients , Method ,listid}=req.body
+    const {nameFood , avarage ,img ,short_desc,Ingredients , Method ,listId}=req.body
     const productInstance = new porductModel({
         nameFood,
         avarage ,
@@ -9,7 +9,7 @@ const createNewProduct =(req , res) =>{
         short_desc ,
         Ingredients ,
         Method ,
-        listid
+        listId
     })
     productInstance.save()
     .then((result)=>{
@@ -24,6 +24,8 @@ res.json({success: true ,message: "Success Operation" , Product :result })
 
 const getAllproduct = (req ,res)=>{
     porductModel.find({})
+    .populate('listId')
+    .exec()
     .then((result)=>{
      res.status(201).json({product : result})
     })

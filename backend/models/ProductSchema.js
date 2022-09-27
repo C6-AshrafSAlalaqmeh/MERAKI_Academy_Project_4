@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const productSchema = new mongoose.Schema(
     {
-        nameFood :{type : String , required : true},
+        nameFood :{type : String , required : true , unique: true},
         avarage :{type : Number},
         img : {type : String},
         short_desc :{type : String},

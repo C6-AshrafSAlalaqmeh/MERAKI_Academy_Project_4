@@ -5,6 +5,6 @@ const authentication = require('../middleware/authentication')
 const listRouter = express.Router()
 
 listRouter.post('/',createListFood)
-listRouter.get('/',authentication ,getAllList)
-
+listRouter.get('/' ,getAllList)
+//,authentication
 module.exports =listRouter

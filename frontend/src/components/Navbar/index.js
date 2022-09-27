@@ -1,13 +1,22 @@
 import {Link} from 'react-router-dom'
+import './style.css'
 
-
-const Navbar = ()=>{
+const Navbar = ({showNavbar})=>{
 return (
     <>
-    <h2>Food Re</h2>
+    <div className='containNav'>
+    <h2>Food Recipes</h2>
+   {!showNavbar ?
+    <div>
     <Link to ='/login' >Login</Link>
     <Link to ='/register' >register</Link>
-    
+    </div>
+    :
+    <>
+    <Link to ='/login' >Logout</Link>
+    </>
+}
+    </div>
     </>
 )
 
