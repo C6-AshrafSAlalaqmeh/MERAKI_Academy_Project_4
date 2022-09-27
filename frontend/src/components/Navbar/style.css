@@ -1,5 +1,13 @@
 .containNav{
     background-color: blueviolet;
     display: flex;
-    gap: 700px;
+    gap: 300px;
+}
+.loginAndRedister{
+    display: flex;
+    gap: 20px;
+}
+.logoutAndHomeAndCreat{
+    display: flex;
+    gap: 20px;
 }

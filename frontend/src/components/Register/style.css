@@ -1,0 +1,37 @@
+.contanirReg{
+    width: 600px;
+    height: 400px;
+    display: grid;
+    border-radius: 7px;
+    border: 1px solid;
+    margin-top: 60px;
+    margin-left: 380px;
+
+}
+.inputsRegister{
+    display: grid;
+    width: 400px;
+    height: 200px;
+    margin-left: 120px;
+    gap: 10px;
+}
+.titleRegister{
+    justify-self: left;
+    margin-left: 20px;
+}
+.buttonRegister{
+    font-size: 20px;
+    width: 200px;
+    height: 50px ;
+    border-radius: 6px;
+    border: 0px;
+    background-color: rgb(196, 173, 218);
+    cursor: pointer;
+    
+}
+
+.buttonRegister:hover{
+    transition: transform .5s ;
+    background-color: rgb(153, 79, 223);
+    transition:  background-color .5s ;
+}

@@ -3,9 +3,8 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 
-const Products = ({listidOriginal ,setShowCreateProduct})=>{
+const Products = ({listidOriginal ,setShowCreateProduct,ProductItem,setProducts})=>{
     setShowCreateProduct(true)
-    const [Products , setProducts]=useState([])
     console.log(listidOriginal)
    
     const navigate = useNavigate();
@@ -29,7 +28,7 @@ const Products = ({listidOriginal ,setShowCreateProduct})=>{
     return (
         <>
         <h1>Products</h1>
-        {Products.length && Products.map((elem)=>{
+        {ProductItem.length && ProductItem.map((elem)=>{
             if(listidOriginal === elem.listId){
              return (
                  <>

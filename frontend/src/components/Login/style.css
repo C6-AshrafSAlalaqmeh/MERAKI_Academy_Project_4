@@ -1,0 +1,44 @@
+.containerLogin{
+    display: grid;
+    height: 400px;
+    width: 600px;
+    border: 1px solid;
+    margin-top: 60px;
+    margin-left: 380px;
+    border-radius: 7px;
+    
+
+}
+.titleLogin{
+    justify-self: left;
+    margin-left: 20px;
+}
+
+.inputLogin{
+display: grid;
+width: 400px;
+height: 100px;
+gap: 10px;
+margin-left: 110px;
+}
+
+/* .divButtonLogin{
+    
+} */
+.ButtonLogin{
+    font-size: 20px;
+    width: 200px;
+    height: 50px ;
+    border-radius: 6px;
+    border: 0px;
+    background-color: rgb(196, 173, 218);
+    cursor: pointer;
+    
+}
+
+.ButtonLogin:hover{
+    /* transform:scale(1.08 );  */
+    transition: transform .5s ;
+    background-color: rgb(153, 79, 223);
+    transition:  background-color .5s ;
+}

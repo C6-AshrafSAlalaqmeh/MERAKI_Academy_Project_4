@@ -38,9 +38,11 @@ const getProductByName =async (req , res)=>{
 try {
     const productName = req.query.name
    const regex = new RegExp( productName , "gi")
+   console.log(regex)
    const product = await porductModel.find({
      nameFood : {$regex : regex}
    })
+   console.log(product)
    if(product.length){
     return res.status(200).json({success:true ,Product:product })
     
