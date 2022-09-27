@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const List = ({ token , setListId }) => {
+const List = ({ token , setListIdOriginal }) => {
   const [lists, setList] = useState([]);
   const navigate = useNavigate();
 
@@ -35,7 +35,7 @@ const List = ({ token , setListId }) => {
             
           return (
             <>
-              <h1 onClick={() =>{ navigate("/product");setListId(elem._id) }}>{elem.typeFood}</h1>
+              <h1 onClick={() =>{ navigate("/product");setListIdOriginal(elem._id) }}>{elem.typeFood}</h1>
               <p>{elem.img}</p>
             </>
           );

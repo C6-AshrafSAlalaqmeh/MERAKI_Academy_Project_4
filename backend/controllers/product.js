@@ -24,8 +24,8 @@ res.json({success: true ,message: "Success Operation" , Product :result })
 
 const getAllproduct = (req ,res)=>{
     porductModel.find({})
-    .populate('listId')
-    .exec()
+    // .populate('listId')
+    // .exec()
     .then((result)=>{
      res.status(201).json({product : result})
     })

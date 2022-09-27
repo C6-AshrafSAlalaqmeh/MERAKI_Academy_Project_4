@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import { useState } from "react";
 import List from "./components/List";
 import Products from "./components/Products";
+import Detalis from "./components/Detalis";
 
 
 
@@ -14,7 +15,7 @@ function App() {
 const [ShowHome , setShoeHome]= useState(true)
 const [showNavbar , setshowNavbar]= useState(false)
 const[token , setToken]=useState("")
-const [listid , setListId]= useState("")
+const [listidOriginal , setListIdOriginal]= useState("")
 
 
   return (
@@ -24,8 +25,9 @@ const [listid , setListId]= useState("")
       <Routes>
     <Route path="/login" element={<Login setShoeHome={setShoeHome} setshowNavbar={setshowNavbar} setToken={setToken} />}/>
     <Route path="/register" element={<Register setShoeHome={setShoeHome}/>}/>
-    <Route path="/list" element={<List token={token} setListId={setListId} />}/>
-    <Route path="/product" element={<Products listid={listid}/>}/>
+    <Route path="/list" element={<List token={token} setListIdOriginal={setListIdOriginal} />}/>
+    <Route path="/product" element={<Products listidOriginal={listidOriginal}/>}/>
+    <Route path="/detalis" element={<Detalis/>}/>
       </Routes>
     </div>
   );
