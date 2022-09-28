@@ -58,25 +58,6 @@ try {
 
 
 
-
-
- // porductModel.find({nameFood : productName})
-    // .then((result)=>{
-    //     console.log(result)
-    //     if(!result.length){
-    //     res.status(404)
-    //     res.json({success: false , message: `The product is not found`})
-    //     }
-    //     else{
-    //     res.status(200)
-    //     res.json({success:true , message: `The product with name⇾ ${productName}`,product:result })
-    //     }
-    // })
-    // .catch((err)=>{
-    //     res.status(500)
-    //     res.json({ success: false, message: "Server Error", Error : err })
-    // })
-
 const updateproduct = (req ,res)=>{
     const productId = req.params.id
     const {nameFood ,avarage ,short_desc }= req.body

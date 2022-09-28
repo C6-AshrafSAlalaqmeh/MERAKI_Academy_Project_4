@@ -1,8 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './style.css'
 
-const List = ({ token , setListIdOriginal }) => {
+
+const List = ({ token , setListIdOriginal,setShoeHome,setTitleList }) => {
+  setShoeHome(false)
   const [lists, setList] = useState([]);
   const navigate = useNavigate();
 
@@ -28,19 +31,21 @@ const List = ({ token , setListIdOriginal }) => {
   }, []);
 
   return (
-    <>
-      <hi>List </hi>
+    <div className="contanirList">
+      
       {lists.length &&
         lists.map((elem) => {
             
           return (
-            <>
-              <h1 onClick={() =>{ navigate("/product");setListIdOriginal(elem._id) }}>{elem.typeFood}</h1>
-              <p>{elem.img}</p>
-            </>
+            <div className="itemList">
+              <div className="titleList">
+              <h1 onClick={() =>{ navigate("/product");setListIdOriginal(elem._id);setTitleList(elem.typeFood) }}>{elem.typeFood}</h1>
+              </div>
+              <img className="imagList" src={`${elem.img}`} />
+            </div>
           );
         })}
-    </>
+    </div>
   );
 };
 export default List;

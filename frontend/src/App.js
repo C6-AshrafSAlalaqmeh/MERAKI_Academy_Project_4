@@ -21,7 +21,8 @@ const [showcreateProduct , setShowCreateProduct]= useState(false)
 const [ProductItem , setProducts]=useState([])
 const [message, setMessage] = useState("")
 const [showMessage, setShowMessage] = useState(false)
-
+const [productDetalis , setProductDetalis]=useState([])
+const [titleList, setTitleList] = useState('')
 
   return (
     <div className="App">
@@ -30,9 +31,9 @@ const [showMessage, setShowMessage] = useState(false)
       <Routes>
     <Route path="/login" element={<Login showMessage={showMessage} setShowMessage={setShowMessage} message={message} setMessage={setMessage} setShoeHome={setShoeHome} setshowNavbar={setshowNavbar} setToken={setToken} />}/>
     <Route path="/register" element={<Register showMessage={showMessage} setShowMessage={setShowMessage} message={message} setMessage={setMessage} setShoeHome={setShoeHome}/>}/>
-    <Route path="/list" element={<List token={token} setListIdOriginal={setListIdOriginal} />}/>
-    <Route path="/product" element={<Products setProducts={setProducts} ProductItem={ProductItem} listidOriginal={listidOriginal} setShowCreateProduct={setShowCreateProduct} showcreateProduct={showcreateProduct}/>}/>
-    <Route path="/detalis" element={<Detalis/>}/>
+    <Route path="/list" element={<List setTitleList={setTitleList} setShoeHome={setShoeHome} token={token} setListIdOriginal={setListIdOriginal} />}/>
+    <Route path="/product" element={<Products titleList={titleList} setProductDetalis={setProductDetalis}  setProducts={setProducts} ProductItem={ProductItem} listidOriginal={listidOriginal} setShowCreateProduct={setShowCreateProduct} showcreateProduct={showcreateProduct}/>}/>
+    <Route path="/detalis" element={<Detalis productDetalis={productDetalis}/>}/>
     <Route path="/addProduct" element={<AddProduct token={token}/>}/>
       </Routes>
     </div>

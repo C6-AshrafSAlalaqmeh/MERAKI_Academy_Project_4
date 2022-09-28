@@ -1,0 +1,40 @@
+.contanirProduct{
+    display: grid;
+    grid-template-columns: repeat(1 , 450px);
+    
+    gap: 10px;
+    
+}
+.titleProduct{
+    margin-left: 500px;
+    
+}
+.tit{
+    width: 200px;
+}
+
+.itemProduct{
+    /* margin-right: 500px; */
+    border: 1px solid;
+    width: 800px;
+    display: flex;
+    height: 150px;
+
+}
+.imgProduct{
+    width: 200px;
+}
+
+.products{
+    display: grid;
+    gap: 20px;
+    
+   
+}
+.ptit{
+    margin-right: 690px;
+    cursor: pointer;
+}
+.p{
+    margin-right: 690px;
+}

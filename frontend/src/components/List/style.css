@@ -1,0 +1,28 @@
+.contanirList{
+    display: grid;
+    grid-template-columns: repeat(4 , 250px);
+    justify-content: center;
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.itemList{
+    border: 1px solid;
+}
+
+.titleList{
+    cursor: pointer;
+    color: blue;
+
+}
+.titleList:hover{
+    transform:scale(1.08 );
+    transition: transform .5s ;
+   
+   
+}
+
+.imagList{
+    height: 200px;
+    width: 200px;
+}
