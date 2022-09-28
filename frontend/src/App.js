@@ -9,6 +9,8 @@ import List from "./components/List";
 import Products from "./components/Products";
 import Detalis from "./components/Detalis";
 import AddProduct from "./components/AddProduct";
+import NameUser from "./components/NameUser";
+import Favorite from "./components/Favorite";
 
 
 
@@ -23,18 +25,23 @@ const [message, setMessage] = useState("")
 const [showMessage, setShowMessage] = useState(false)
 const [productDetalis , setProductDetalis]=useState([])
 const [titleList, setTitleList] = useState('')
+const [storedName, setstoredName] = useState('')
+const [favorite, setFavorite] = useState('')
+
 
   return (
     <div className="App">
       <Navbar showNavbar={showNavbar} setProducts={setProducts} showcreateProduct={showcreateProduct} setShowCreateProduct={setShowCreateProduct} />
      {ShowHome && <Home/>}
+     <NameUser storedName={storedName} />
       <Routes>
-    <Route path="/login" element={<Login showMessage={showMessage} setShowMessage={setShowMessage} message={message} setMessage={setMessage} setShoeHome={setShoeHome} setshowNavbar={setshowNavbar} setToken={setToken} />}/>
+    <Route path="/login" element={<Login setstoredName={setstoredName} showMessage={showMessage} setShowMessage={setShowMessage} message={message} setMessage={setMessage} setShoeHome={setShoeHome} setshowNavbar={setshowNavbar} setToken={setToken} />}/>
     <Route path="/register" element={<Register showMessage={showMessage} setShowMessage={setShowMessage} message={message} setMessage={setMessage} setShoeHome={setShoeHome}/>}/>
     <Route path="/list" element={<List setTitleList={setTitleList} setShoeHome={setShoeHome} token={token} setListIdOriginal={setListIdOriginal} />}/>
-    <Route path="/product" element={<Products titleList={titleList} setProductDetalis={setProductDetalis}  setProducts={setProducts} ProductItem={ProductItem} listidOriginal={listidOriginal} setShowCreateProduct={setShowCreateProduct} showcreateProduct={showcreateProduct}/>}/>
+    <Route path="/product" element={<Products setFavorite={setFavorite} titleList={titleList} setProductDetalis={setProductDetalis}  setProducts={setProducts} ProductItem={ProductItem} listidOriginal={listidOriginal} setShowCreateProduct={setShowCreateProduct} showcreateProduct={showcreateProduct}/>}/>
     <Route path="/detalis" element={<Detalis productDetalis={productDetalis}/>}/>
     <Route path="/addProduct" element={<AddProduct token={token}/>}/>
+    <Route path="/favorite" element={<Favorite favorite={favorite}/>}/>
       </Routes>
     </div>
   );

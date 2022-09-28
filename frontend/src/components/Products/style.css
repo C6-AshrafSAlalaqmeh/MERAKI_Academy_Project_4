@@ -16,7 +16,7 @@
 .itemProduct{
     /* margin-right: 500px; */
     border: 1px solid;
-    width: 800px;
+    width: auto;
     display: flex;
     height: 150px;
 
@@ -39,7 +39,7 @@
     margin-right: 690px;
 }
 .titAndAvarageAnddesc{
-    width: 200px;
+    width: 300px;
 }
 .buttonUpdateAndDelete{
     margin-top: 50PX;

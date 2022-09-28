@@ -35,6 +35,7 @@ const Navbar = ({showNavbar , showcreateProduct ,setShowCreateProduct,setProduct
     <div className='logoutAndHomeAndCreat'>
     <Link className='logout' to ='/login' >Logout</Link>
     <Link  className='home' to ='/list'>Home</Link>
+    <Link  className='fav' to ='/favorite'>Favorite</Link>
    {showcreateProduct && <Link to ='/addProduct' >Create Product</Link>}
     
     </div>

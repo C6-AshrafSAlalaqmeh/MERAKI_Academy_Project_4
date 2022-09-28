@@ -5,7 +5,7 @@ import './style.css'
 
 
 
-const Login = ({setShowMessage,showMessage,message,setMessage,setShoeHome,setshowNavbar,setToken}) => {
+const Login = ({setstoredName,setShowMessage,showMessage,message,setMessage,setShoeHome,setshowNavbar,setToken}) => {
   setShoeHome(false)
  const [email , setEmail]= useState("")
 const [password , setPassword] = useState("")
@@ -19,10 +19,11 @@ const buttLogin=()=>{
     password
   })
   .then((result)=>{
-  console.log(result.data.Token)
+  console.log(result)
   setToken(result.data.Token)
  navigate('/list')
  setshowNavbar(true)
+ setstoredName(result.data.firstName)
   })
   .catch((err)=>{
     console.log(err.response.data.message)

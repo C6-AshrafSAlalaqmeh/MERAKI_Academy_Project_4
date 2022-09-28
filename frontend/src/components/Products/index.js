@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import './style.css'
 
 
-const Products = ({titleList,setProductDetalis,productDetalis,listidOriginal ,setShowCreateProduct,ProductItem,setProducts})=>{
+const Products = ({setFavorite,titleList,setProductDetalis,productDetalis,listidOriginal ,setShowCreateProduct,ProductItem,setProducts})=>{
   const [updateTitle, setUpdateTitle] = useState('')
   const [avarage, setAvarage] = useState('')
   const [desc, setDesc] = useState('')
@@ -52,7 +52,7 @@ const Products = ({titleList,setProductDetalis,productDetalis,listidOriginal ,se
   axios.delete(`http://localhost:5000/product/${id}`)
   .then((result)=>{
     const deleteitem = ProductItem.filter((elem)=>{
-      return id !=elem._id
+      return id != elem._id
     })
   })
   .catch((err)=>{
@@ -60,7 +60,6 @@ const Products = ({titleList,setProductDetalis,productDetalis,listidOriginal ,se
   })
   
  }
-
 
 
 
@@ -93,6 +92,9 @@ const Products = ({titleList,setProductDetalis,productDetalis,listidOriginal ,se
                 <div className="buttonUpdateAndDelete">
                   <button onClick={()=>{buttonUpdate(elem._id)}}> Update </button>
                   <button onClick={()=>{buttonDelete(elem._id)}}> Delete</button>
+                </div>
+                <div>
+                  <button onClick={()=>{ navigate('/favorite') ;setFavorite(elem)}}>Favorite </button>
                 </div>
                    </div>
              )
