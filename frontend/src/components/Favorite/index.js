@@ -1,16 +1,11 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect } from 'react'
 
-const Favorite = ({favorite}) => {
-    console.log(favorite)
+const Favorite = ({userId,favorite,token}) => {
+ 
   return (
     <>
-    <div>Favorite</div>
-   <p>{favorite.img}</p>
-   <p>{favorite.nameFood}</p>
-   <p>{favorite.avarage}</p>
-   <p>{favorite.Ingredients}</p>
-   <p>{favorite.Method}</p>
-
+ 
 
     </>
   )

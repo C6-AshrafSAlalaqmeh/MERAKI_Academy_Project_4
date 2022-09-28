@@ -77,7 +77,8 @@ const login = (req , res)=>{
           res.json({
             message : 'Successed Login' ,
             Token : token ,
-            firstName : result[0].firstName
+            firstName : result[0].firstName ,
+            userId : result[0]._id
             
           })
         }

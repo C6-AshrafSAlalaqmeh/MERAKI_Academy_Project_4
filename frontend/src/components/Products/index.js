@@ -4,19 +4,24 @@ import { useNavigate } from "react-router-dom"
 import './style.css'
 
 
-const Products = ({setFavorite,titleList,setProductDetalis,productDetalis,listidOriginal ,setShowCreateProduct,ProductItem,setProducts})=>{
+const Products = ({UserId,token,setFavorite,titleList,setProductDetalis,productDetalis,listidOriginal ,setShowCreateProduct,ProductItem,setProducts})=>{
+  
   const [updateTitle, setUpdateTitle] = useState('')
   const [avarage, setAvarage] = useState('')
   const [desc, setDesc] = useState('')
   const [showInputUpdate, setShowInputUpdate] = useState(false)
-
-  setShowCreateProduct(true)
+ console.log(UserId)
+ console.log("DScA")
     
    
     const navigate = useNavigate();
    
     const getProduct =()=>{
-        axios.get('http://localhost:5000/product')
+        axios.get('http://localhost:5000/product',{
+          // headers :{
+          //   authorization : 'Bearer ' + token
+          // }
+        })
         .then((result)=>{
           setProducts(result.data.product)
           
@@ -25,9 +30,10 @@ const Products = ({setFavorite,titleList,setProductDetalis,productDetalis,listid
          console.log(err)
         })
     }
- useEffect(()=>{
-    getProduct()
- },[ProductItem])
+    useEffect(()=>{
+      setShowCreateProduct(true)
+        getProduct()
+     },[])
 
 
  const buttonUpdate = (id)=>{
@@ -37,9 +43,8 @@ const Products = ({setFavorite,titleList,setProductDetalis,productDetalis,listid
     short_desc : desc
   })
   .then((result)=>{
-    
+    console.log("Enter Update")
      getProduct()
-
     
   })
   .catch((err)=>{
@@ -62,7 +67,27 @@ const Products = ({setFavorite,titleList,setProductDetalis,productDetalis,listid
  }
 
 
+const buttonAddFavorite =(ElemntId)=>{
+ console.log(ElemntId)
+ console.log(UserId)
+  axios.post('http://localhost:5000/favorite',{
+    itemid : ElemntId, //elem._id
+    userid : UserId 
 
+ },{
+    headers : {
+        authorization : 'Bearer ' + token
+    }
+ })
+ .then((result)=>{
+   console.log(result)
+ })
+ .catch((err)=>{
+    console.log(err)
+ })
+
+  
+}
 
     return (
         <div className="contanirProduct">
@@ -70,8 +95,8 @@ const Products = ({setFavorite,titleList,setProductDetalis,productDetalis,listid
         <h1 className="tit">{`${titleList}`}</h1>
         </div>
         <div className="products">
-        {ProductItem.length && ProductItem.map((elem)=>{
-           
+        {ProductItem.length  && ProductItem.map((elem)=>{
+          //  setFavorite(elem._id)
           if(listidOriginal === elem.listId){
              
                 return (
@@ -90,11 +115,11 @@ const Products = ({setFavorite,titleList,setProductDetalis,productDetalis,listid
                   <input placeholder="Description" onChange={(e)=>{setDesc(e.target.value)}}/>
                 </div>
                 <div className="buttonUpdateAndDelete">
-                  <button onClick={()=>{buttonUpdate(elem._id)}}> Update </button>
+                  <button onClick={()=> buttonUpdate(elem._id) }> Update </button>
                   <button onClick={()=>{buttonDelete(elem._id)}}> Delete</button>
                 </div>
                 <div>
-                  <button onClick={()=>{ setFavorite(elem)}}>Favorite </button>
+                  <button onClick={()=>{buttonAddFavorite(elem._id)}}>Add Favorite </button>
                 </div>
                    </div>
              )

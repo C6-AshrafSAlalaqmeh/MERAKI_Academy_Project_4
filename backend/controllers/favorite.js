@@ -27,7 +27,7 @@ const getFavorite =(req , res)=>{
     .populate('itemid')
     .exec()
     .then((result)=>{
-    res.status(201).json(result)
+    res.status(201).json({result : result})
     })
     .catch((err)=>{
         console.log(err)
