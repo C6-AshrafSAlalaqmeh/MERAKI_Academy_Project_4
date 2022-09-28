@@ -94,7 +94,7 @@ const Products = ({setFavorite,titleList,setProductDetalis,productDetalis,listid
                   <button onClick={()=>{buttonDelete(elem._id)}}> Delete</button>
                 </div>
                 <div>
-                  <button onClick={()=>{ navigate('/favorite') ;setFavorite(elem)}}>Favorite </button>
+                  <button onClick={()=>{ setFavorite(elem)}}>Favorite </button>
                 </div>
                    </div>
              )

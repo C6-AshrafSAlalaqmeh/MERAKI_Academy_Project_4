@@ -26,7 +26,7 @@ const [showMessage, setShowMessage] = useState(false)
 const [productDetalis , setProductDetalis]=useState([])
 const [titleList, setTitleList] = useState('')
 const [storedName, setstoredName] = useState('')
-const [favorite, setFavorite] = useState('')
+const [favorite, setFavorite] = useState([])
 
 
   return (
