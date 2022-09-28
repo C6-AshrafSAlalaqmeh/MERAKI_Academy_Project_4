@@ -33,7 +33,7 @@ const [showMessage, setShowMessage] = useState(false)
     <Route path="/list" element={<List token={token} setListIdOriginal={setListIdOriginal} />}/>
     <Route path="/product" element={<Products setProducts={setProducts} ProductItem={ProductItem} listidOriginal={listidOriginal} setShowCreateProduct={setShowCreateProduct} showcreateProduct={showcreateProduct}/>}/>
     <Route path="/detalis" element={<Detalis/>}/>
-    <Route path="/addProduct" element={<AddProduct/>}/>
+    <Route path="/addProduct" element={<AddProduct token={token}/>}/>
       </Routes>
     </div>
   );
