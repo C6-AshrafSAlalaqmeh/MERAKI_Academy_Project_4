@@ -38,3 +38,20 @@
 .p{
     margin-right: 690px;
 }
+.titAndAvarageAnddesc{
+    width: 200px;
+}
+.buttonUpdateAndDelete{
+    margin-top: 50PX;
+    display: grid;
+    gap: 10px;
+    width: 100px;
+    margin-left: 100px;
+}
+.inputUpdate{
+    display: grid;
+    height: 100px;
+    gap: 10px;
+    margin-top: 15px;
+    
+}

@@ -1,13 +1,45 @@
 .containNav{
     background-color: blueviolet;
     display: flex;
-    gap: 300px;
+    gap: 420px;
+    align-items:center;
 }
 .loginAndRedister{
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    /* margin-top: 20px; */
+    font-size: 25px;
+    width: 10px;
+    
 }
 .logoutAndHomeAndCreat{
     display: flex;
     gap: 20px;
+}
+.search{
+    margin-left: 500px;
+    
+}
+.searchAndinput{
+    align-content: start;
+}
+.login{
+    text-decoration: none ;
+    
+    
+}
+
+.login:hover{
+    transform:scale(1.08 ); 
+    transition: transform .5s ;
+
+}
+.reg{
+    text-decoration: none ;
+}
+
+.reg:hover{
+    transform:scale(1.08 ); 
+    transition: transform .5s ;
+
 }
