@@ -23,7 +23,7 @@ const buttLogin=()=>{
   setToken(result.data.Token)
  navigate('/list')
  setshowNavbar(true)
- setstoredName(result.data.firstNameresult.data.firstName)
+ setstoredName(result.data.firstName)
  setUserId(result.data.userId)
   })
   .catch((err)=>{

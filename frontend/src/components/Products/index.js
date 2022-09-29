@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import './style.css'
 
 
-const Products = ({UserId,token,setFavorite,titleList,setProductDetalis,productDetalis,listidOriginal ,setShowCreateProduct,ProductItem,setProducts})=>{
+const Products = ({ setTitleProduct,UserId,token,setFavorite,titleList,setProductDetalis,productDetalis,listidOriginal ,setShowCreateProduct,ProductItem,setProducts})=>{
   
   const [updateTitle, setUpdateTitle] = useState('')
   const [avarage, setAvarage] = useState('')
@@ -17,11 +17,7 @@ const Products = ({UserId,token,setFavorite,titleList,setProductDetalis,productD
     const navigate = useNavigate();
    
     const getProduct =()=>{
-        axios.get('http://localhost:5000/product',{
-          // headers :{
-          //   authorization : 'Bearer ' + token
-          // }
-        })
+        axios.get('http://localhost:5000/product')
         .then((result)=>{
           setProducts(result.data.product)
           
@@ -33,7 +29,7 @@ const Products = ({UserId,token,setFavorite,titleList,setProductDetalis,productD
     useEffect(()=>{
       setShowCreateProduct(true)
         getProduct()
-     },[])
+     }, [])
 
 
  const buttonUpdate = (id)=>{
@@ -105,7 +101,7 @@ const buttonAddFavorite =(ElemntId)=>{
                 <p className="p">{elem.img}</p>
                 </div>
                 <div className="titAndAvarageAnddesc">
-                <p className="ptit" onClick={()=>{ navigate('/detalis') ;setShowCreateProduct(false);setProductDetalis(elem) }}>{elem.nameFood}</p>
+                <p className="ptit" onClick={()=>{ navigate('/detalis') ; setTitleProduct(elem.nameFood);setShowCreateProduct(false);setProductDetalis(elem) }}>{elem.nameFood}</p>
                 <p className="p">{elem.avarage}</p>
                 <p className="p"> {elem.short_desc}</p>
                 </div>
@@ -115,11 +111,11 @@ const buttonAddFavorite =(ElemntId)=>{
                   <input placeholder="Description" onChange={(e)=>{setDesc(e.target.value)}}/>
                 </div>
                 <div className="buttonUpdateAndDelete">
-                  <button onClick={()=> buttonUpdate(elem._id) }> Update </button>
-                  <button onClick={()=>{buttonDelete(elem._id)}}> Delete</button>
+                  <button className="update" onClick={()=> buttonUpdate(elem._id) }> Update </button>
+                  <button className="delete" onClick={()=>{buttonDelete(elem._id)}}> Delete</button>
                 </div>
                 <div>
-                  <button onClick={()=>{buttonAddFavorite(elem._id)}}>Add Favorite </button>
+                  <button className="favorite" onClick={()=>{buttonAddFavorite(elem._id)}}>Add Favorite </button>
                 </div>
                    </div>
              )

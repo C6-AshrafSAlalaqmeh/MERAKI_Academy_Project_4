@@ -28,6 +28,8 @@ const [titleList, setTitleList] = useState('')
 const [storedName, setstoredName] = useState('')
 const [favorite, setFavorite] = useState([])
 const [UserId, setUserId] = useState('')
+const [titleProduct, setTitleProduct] = useState('')
+
 
   return (
     <div className="App">
@@ -38,8 +40,8 @@ const [UserId, setUserId] = useState('')
     <Route path="/login" element={<Login setUserId={setUserId} setstoredName={setstoredName} showMessage={showMessage} setShowMessage={setShowMessage} message={message} setMessage={setMessage} setShoeHome={setShoeHome} setshowNavbar={setshowNavbar} setToken={setToken} />}/>
     <Route path="/register" element={<Register showMessage={showMessage} setShowMessage={setShowMessage} message={message} setMessage={setMessage} setShoeHome={setShoeHome}/>}/>
     <Route path="/list" element={<List setTitleList={setTitleList} setShoeHome={setShoeHome} token={token} setListIdOriginal={setListIdOriginal} />}/>
-    <Route path="/product" element={<Products  UserId={UserId} token={token} setFavorite={setFavorite} titleList={titleList} setProductDetalis={setProductDetalis}  setProducts={setProducts} ProductItem={ProductItem} listidOriginal={listidOriginal} setShowCreateProduct={setShowCreateProduct} showcreateProduct={showcreateProduct}/>}/>
-    <Route path="/detalis" element={<Detalis productDetalis={productDetalis}/>}/>
+    <Route path="/product" element={<Products setTitleProduct={setTitleProduct} UserId={UserId} token={token} setFavorite={setFavorite} titleList={titleList} setProductDetalis={setProductDetalis}  setProducts={setProducts} ProductItem={ProductItem} listidOriginal={listidOriginal} setShowCreateProduct={setShowCreateProduct} showcreateProduct={showcreateProduct}/>}/>
+    <Route path="/detalis" element={<Detalis titleProduct={titleProduct} setTitleProduct={setTitleProduct} productDetalis={productDetalis}/>}/>
     <Route path="/addProduct" element={<AddProduct token={token}/>}/>
     <Route path="/favorite" element={<Favorite  favorite={favorite}/>}/>
       </Routes>
