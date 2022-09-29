@@ -65,21 +65,21 @@ const updateproduct = (req ,res)=>{
     const {nameFood ,avarage ,short_desc }= req.body
     porductModel.findOneAndUpdate({_id : productId} , {nameFood , avarage ,short_desc} , {new : true})
     .then((result)=>{
-   console.log(result)
+   res.status(201).json(result)
     })
     .catch((err)=>{
-console.log(err)
+        res.status(400).json(err)
     })
 }
 
 const deleteProduct = (req , res)=>{
     const productId = req.params.id
     porductModel.findOneAndDelete({_id:productId})
-    .then(()=>{
-        console.log("Removed")
+    .then((result)=>{
+        res.status(201).json(result)
     })
     .catch((err)=>{
-        console.log(err)
+        res.status(400).json(err)
     })
 }
 
