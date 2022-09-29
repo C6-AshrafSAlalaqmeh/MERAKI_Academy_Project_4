@@ -10,20 +10,21 @@ const Detalis = ({productDetalis,titleProduct})=>{
     <h1>{`${titleProduct}`}</h1>
    <div className="contanirDetalis">
        <div className="itemDetalis">
-           <div className="imgDetalis">
-           <img src={`${productDetalis.img}`}/>
+           <div className="divimgDetalis">
+           <img className="imgDetalis" src={`${productDetalis.img}`}/>
            </div>
-           <div>
+           <div className="titAnaavaDetalis">
             <p>{productDetalis.nameFood}</p>  
-            <p>{productDetalis.avarage}</p>
+            <p className="avarageDetalis">{productDetalis.avarage}</p>
            <div className="prepAndCook">
-            <p>Prep : {productDetalis.Prep}</p>
-            <p>Cook : {productDetalis.Cook}</p>
+            <p>Prep : {productDetalis.Prep} minutes</p>
+            <p>Cook : {productDetalis.Cook} minutes</p>
             </div>
             </div>
             <div className="stepsAndMethod">
-            <p>{productDetalis.Ingredients}</p>
-            <p>{productDetalis.Method}</p>
+
+            <p> Ingredients: <p className="Ingredients">{productDetalis.Ingredients}</p></p>
+            <p>Method : <p className="Ingredients">{productDetalis.Method}</p></p>
             </div>
        </div>   
        </div>   

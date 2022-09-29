@@ -34,10 +34,11 @@ const [showHome, setShowHome] = useState(false)
 
   return (
     <div className="App">
-      <Navbar  showNavbar={showNavbar} setProducts={setProducts} showcreateProduct={showcreateProduct} setShowCreateProduct={setShowCreateProduct} />
+      <Navbar setShowHome={setShowHome} showNavbar={showNavbar} setProducts={setProducts} showcreateProduct={showcreateProduct} setShowCreateProduct={setShowCreateProduct} />
      {ShowHome && <Home/>}
    {showHome &&  <NameUser storedName={storedName} />}
       <Routes>
+    <Route path="/home" element={<Home/>}/>
     <Route path="/login" element={<Login setShowHome={setShowHome} setUserId={setUserId} setstoredName={setstoredName} showMessage={showMessage} setShowMessage={setShowMessage} message={message} setMessage={setMessage} setShoeHome={setShoeHome} setshowNavbar={setshowNavbar} setToken={setToken} />}/>
     <Route path="/register" element={<Register showMessage={showMessage} setShowMessage={setShowMessage} message={message} setMessage={setMessage} setShoeHome={setShoeHome}/>}/>
     <Route path="/list" element={<List setTitleList={setTitleList} setShoeHome={setShoeHome} token={token} setListIdOriginal={setListIdOriginal} />}/>

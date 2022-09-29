@@ -20,16 +20,18 @@
     border: 1px solid;
     width: auto;
     display: flex;
-    height: 150px;
+    height: 180px;
 
 }
 .imgProduct{
-    width: 150px;
+    width: 170px;
     border: 1px solid;
+    border-radius: 10px;
 }
 .pimg{
-    width: 150px;
-    height: 148px;
+    width: 170px;
+    height: 178px;
+    border-radius: 10px;
 }
 
 .products{
@@ -51,7 +53,7 @@
 }
 .titAndAvarageAnddesc{
     width: 300px;
-    margin-left: 0px;
+    margin-left: 20px;
 }
 .buttonUpdateAndDelete{
     margin-top: 50PX;

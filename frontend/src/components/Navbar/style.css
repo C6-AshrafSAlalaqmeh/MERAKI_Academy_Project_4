@@ -3,6 +3,7 @@
     display: flex;
     gap: 420px;
     align-items:center;
+    height: 100px;
 }
 .loginAndRedister{
     display: flex;

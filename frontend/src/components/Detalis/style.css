@@ -16,15 +16,32 @@
 .imgDetalis{
     width: 200px;
     height: 200px;
-    border: 1px solid;
+    
 }
-
+.divimgDetalis{
+    border: 1px solid;
+    width: 200px;
+    height: 200px;
+}
+.titAnaavaDetalis{
+    width: 300px;
+   text-align: left;
+}
+.avarageDetalis{
+    text-align: center;
+}
 .stepsAndMethod{
     display: flex;
-    gap: 150px;
-    margin-left: 100px;
+    gap: 50px;
+    margin-left: 30px;
 }
 .prepAndCook{
     margin-top: 40px;
     margin-right: 200px;
+    width: 200px;
+}
+.Ingredients{
+    text-align: left;
+    width: 300px;
+   
 }

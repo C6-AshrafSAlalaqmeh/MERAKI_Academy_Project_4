@@ -1,12 +1,12 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import './style.css'
 
-const Navbar = ({showNavbar , showcreateProduct ,setShowCreateProduct,setProducts})=>{
+const Navbar = ({setShowHome,showNavbar , showcreateProduct ,setShowCreateProduct,setProducts})=>{
     const [inputSearch , setInputSearch] = useState('')
 
-    
+    const navigate = useNavigate()
        
     
 
@@ -19,9 +19,11 @@ const Navbar = ({showNavbar , showcreateProduct ,setShowCreateProduct,setProduct
         .catch((err)=>{
          console.log(err)
         })
-  
+}
 
-
+const logout =()=>{
+    setShowHome(false)
+navigate('/home')
 }
         return (
     <>
@@ -40,7 +42,7 @@ const Navbar = ({showNavbar , showcreateProduct ,setShowCreateProduct,setProduct
     <Link  className='home' to ='/list'>Home</Link>
     <Link  className='fav' to ='/favorite'>Favorite</Link>
    {showcreateProduct && <Link className='addPro' to ='/addProduct' >Create Product</Link>}
-   <Link className='logout' to ='/login' >Logout</Link>
+   <button  onClick={()=> logout()} className="logout">Logout</button> 
     </div>
 
 }
