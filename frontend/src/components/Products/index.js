@@ -50,7 +50,16 @@ const Products = ({
         short_desc: desc,
       })
       .then((result) => {
-        console.log("Enter Update");
+        const newProduct = ProductItem.map((elem)=>{
+          if(elem._id === id){
+            console.log(result.data.nameFood)
+            elem.nameFood =result.data.nameFood
+            elem.avarage =result.data.avarage
+            elem.short_desc = result.data.short_desc
+          }
+          return elem
+        })
+        
         getProduct();
       })
       .catch((err) => {
