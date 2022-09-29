@@ -15,6 +15,7 @@
 
 .imgDetalis{
     width: 200px;
+    height: 200px;
     border: 1px solid;
 }
 
@@ -22,4 +23,8 @@
     display: flex;
     gap: 150px;
     margin-left: 100px;
+}
+.prepAndCook{
+    margin-top: 40px;
+    margin-right: 200px;
 }

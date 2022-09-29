@@ -16,6 +16,10 @@ const Detalis = ({productDetalis,titleProduct})=>{
            <div>
             <p>{productDetalis.nameFood}</p>  
             <p>{productDetalis.avarage}</p>
+           <div className="prepAndCook">
+            <p>Prep : {productDetalis.Prep}</p>
+            <p>Cook : {productDetalis.Cook}</p>
+            </div>
             </div>
             <div className="stepsAndMethod">
             <p>{productDetalis.Ingredients}</p>

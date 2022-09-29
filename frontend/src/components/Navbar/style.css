@@ -43,3 +43,32 @@
     transition: transform .5s ;
 
 }
+.logout{
+    text-decoration: none ;
+}
+.logout:hover{
+    transform:scale(1.08 ); 
+    transition: transform .5s ;
+}
+.home{
+    text-decoration: none ;
+}
+.home:hover{
+    transform:scale(1.08 ); 
+    transition: transform .5s ;
+}
+.fav{
+    text-decoration: none ;
+}
+.fav:hover{
+    transform:scale(1.08 ); 
+    transition: transform .5s ;
+}
+.addPro{
+    text-decoration: none ;
+}
+
+.addPro:hover{
+    transform:scale(1.08 ); 
+    transition: transform .5s ;
+}

@@ -1,12 +1,14 @@
 const porductModel = require('../models/ProductSchema')
 
 const createNewProduct =(req , res) =>{
-    const {nameFood , avarage ,img ,short_desc,Ingredients , Method ,listId}=req.body
+    const {nameFood , avarage ,img ,short_desc,Prep,Cook,Ingredients , Method ,listId}=req.body
     const productInstance = new porductModel({
         nameFood,
         avarage ,
         img ,
         short_desc ,
+        Prep,
+        Cook,
         Ingredients ,
         Method ,
         listId
