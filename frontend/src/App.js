@@ -30,7 +30,7 @@ const [favorite, setFavorite] = useState([])
 const [UserId, setUserId] = useState('')
 const [titleProduct, setTitleProduct] = useState('')
 const [showHome, setShowHome] = useState(false)
-
+const [idFavorite, setidFavorite] = useState('')
 
   return (
     <div className="App">
@@ -42,10 +42,10 @@ const [showHome, setShowHome] = useState(false)
     <Route path="/login" element={<Login setShowHome={setShowHome} setUserId={setUserId} setstoredName={setstoredName} showMessage={showMessage} setShowMessage={setShowMessage} message={message} setMessage={setMessage} setShoeHome={setShoeHome} setshowNavbar={setshowNavbar} setToken={setToken} />}/>
     <Route path="/register" element={<Register showMessage={showMessage} setShowMessage={setShowMessage} message={message} setMessage={setMessage} setShoeHome={setShoeHome}/>}/>
     <Route path="/list" element={<List setTitleList={setTitleList} setShoeHome={setShoeHome} token={token} setListIdOriginal={setListIdOriginal} />}/>
-    <Route path="/product" element={<Products setTitleProduct={setTitleProduct} UserId={UserId} token={token} setFavorite={setFavorite} titleList={titleList} setProductDetalis={setProductDetalis}  setProducts={setProducts} ProductItem={ProductItem} listidOriginal={listidOriginal} setShowCreateProduct={setShowCreateProduct} showcreateProduct={showcreateProduct}/>}/>
+    <Route path="/product" element={<Products setidFavorite={setidFavorite} setTitleProduct={setTitleProduct} UserId={UserId} token={token} setFavorite={setFavorite} titleList={titleList} setProductDetalis={setProductDetalis}  setProducts={setProducts} ProductItem={ProductItem} listidOriginal={listidOriginal} setShowCreateProduct={setShowCreateProduct} showcreateProduct={showcreateProduct}/>}/>
     <Route path="/detalis" element={<Detalis titleProduct={titleProduct} setTitleProduct={setTitleProduct} productDetalis={productDetalis}/>}/>
     <Route path="/addProduct" element={<AddProduct message={message} showMessage={showMessage} setShowMessage={setShowMessage} setMessage={setMessage} token={token}/>}/>
-    <Route path="/favorite" element={<Favorite  favorite={favorite}/>}/>
+    <Route path="/favorite" element={<Favorite idFavorite={idFavorite} UserId={UserId} token={token} favorite={favorite}/>}/>
       </Routes>
     </div>
   );

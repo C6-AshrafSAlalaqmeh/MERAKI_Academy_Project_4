@@ -2,16 +2,23 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './style.css'
 
-const Favorite = ({userId,favorite,token}) => {
+const Favorite = ({idFavorite,UserId,token,favorite}) => {
  const [favoriteItem, setFavoriteItem] = useState([])
 
 
 const getFavorite =()=>{
-  axios.get('http://localhost:5000/favorite')
+ // if(idFavorite === UserId)
+  axios.get('http://localhost:5000/favorite',{
+    headers :{
+      authorization : 'Bearer ' + token
+    }
+  })
+
   .then((result)=>{
+ 
    console.log(result.data.result)
    setFavoriteItem(result.data.result)
-
+ 
   })
   .catch((err)=>{
   console.log(err);

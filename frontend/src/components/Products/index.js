@@ -15,6 +15,7 @@ const Products = ({
   setShowCreateProduct,
   ProductItem,
   setProducts,
+  setidFavorite
 }) => {
   const [updateTitle, setUpdateTitle] = useState("");
   const [avarage, setAvarage] = useState("");
@@ -85,8 +86,7 @@ const Products = ({
   };
 
   const buttonAddFavorite = (ElemntId) => {
-    console.log(ElemntId);
-    console.log(UserId);
+    
     axios
       .post(
         "http://localhost:5000/favorite",
@@ -101,7 +101,8 @@ const Products = ({
         }
       )
       .then((result) => {
-        console.log(result);
+        console.log(result.data.userid);
+        setidFavorite(result.data.userid)
       })
       .catch((err) => {
         console.log(err);
