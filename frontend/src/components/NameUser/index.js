@@ -1,9 +1,13 @@
 import React from 'react'
+import './style.css'
+
 
 const NameUser = ({storedName}) => {
   return (
     <>
-    <div>{`${storedName}`}</div>
+    <div className='nameUser'>
+      <h1> Welcome : {`${storedName}`}</h1>
+      </div>
     </>
   )
 }

@@ -98,11 +98,11 @@ const buttonAddFavorite =(ElemntId)=>{
                 return (
                  <div className="itemProduct">
                     <div className="imgProduct">
-                <p className="p">{elem.img}</p>
+                <img className="pimg" src={`${elem.img}`} />
                 </div>
                 <div className="titAndAvarageAnddesc">
                 <p className="ptit" onClick={()=>{ navigate('/detalis') ; setTitleProduct(elem.nameFood);setShowCreateProduct(false);setProductDetalis(elem) }}>{elem.nameFood}</p>
-                <p className="p">{elem.avarage}</p>
+                <p className="pava">{elem.avarage}</p>
                 <p className="p"> {elem.short_desc}</p>
                 </div>
                 <div className="inputUpdate">

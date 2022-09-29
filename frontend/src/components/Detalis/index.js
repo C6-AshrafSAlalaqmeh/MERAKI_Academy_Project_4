@@ -11,7 +11,7 @@ const Detalis = ({productDetalis,titleProduct})=>{
    <div className="contanirDetalis">
        <div className="itemDetalis">
            <div className="imgDetalis">
-           <p>{productDetalis.img}</p>
+           <img src={`${productDetalis.img}`}/>
            </div>
            <div>
             <p>{productDetalis.nameFood}</p>  

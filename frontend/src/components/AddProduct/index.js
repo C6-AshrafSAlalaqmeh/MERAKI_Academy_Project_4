@@ -69,10 +69,10 @@ const AddProduct = ({token}) => {
 <select className='select' name='rating' onChange={(e)=>{setlistId(e.target.value) }}>
 
 <option>select </option>  
- <option value="6330adc34ace890bc52132ff">Type Food 1 </option>   
- <option value='6330af4fe2d21343ae89a9e7'>Type Food 2 </option>
- <option value='3'>Type Food 3 </option>   
- <option value='4'>Type Food 4 </option>
+ <option value="63357abd76aaa110985f6df1">family meals </option>   
+ <option value='63357b3676aaa110985f6df4'>Quick cakes </option>
+ <option value='63357b9476aaa110985f6df7'>under-20-minutes </option>   
+ <option value='63357bf676aaa110985f6dfa'>types of breakfast </option>
 </select>
 </div> 
 </div>

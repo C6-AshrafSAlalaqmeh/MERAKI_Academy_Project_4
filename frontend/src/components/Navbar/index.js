@@ -5,7 +5,10 @@ import './style.css'
 
 const Navbar = ({showNavbar , showcreateProduct ,setShowCreateProduct,setProducts})=>{
     const [inputSearch , setInputSearch] = useState('')
-     
+
+    
+       
+    
 
     const buttonSearch =()=>{
         axios.get(`http://localhost:5000/product/search?name=${inputSearch}`)
@@ -33,11 +36,11 @@ const Navbar = ({showNavbar , showcreateProduct ,setShowCreateProduct,setProduct
     </div>
     :
     <div className='logoutAndHomeAndCreat'>
-    <Link className='logout' to ='/login' >Logout</Link>
+    
     <Link  className='home' to ='/list'>Home</Link>
     <Link  className='fav' to ='/favorite'>Favorite</Link>
    {showcreateProduct && <Link className='addPro' to ='/addProduct' >Create Product</Link>}
-    
+   <Link className='logout' to ='/login' >Logout</Link>
     </div>
 
 }

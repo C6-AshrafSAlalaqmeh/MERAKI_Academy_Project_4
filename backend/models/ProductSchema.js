@@ -8,7 +8,7 @@ const productSchema = new mongoose.Schema(
         short_desc :{type : String},
         Prep :{type : Number}, 
         Cook :{type : Number},
-        Ingredients:{type : String},
+        Ingredients:[{type : String}],
         Method : {type :String} ,
         listId : {type : mongoose.Schema.Types.ObjectId , ref:'List' }
     }
