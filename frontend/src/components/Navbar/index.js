@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import './style.css'
 
-const Navbar = ({setShowHome,showNavbar , showcreateProduct ,setShowCreateProduct,setProducts})=>{
+const Navbar = ({setshowNavbar,setToken,setShowHome,showNavbar , showcreateProduct ,setShowCreateProduct,setProducts})=>{
     const [inputSearch , setInputSearch] = useState('')
 
     const navigate = useNavigate()
@@ -23,12 +23,15 @@ const Navbar = ({setShowHome,showNavbar , showcreateProduct ,setShowCreateProduc
 
 const logout =()=>{
     setShowHome(false)
+    setshowNavbar(false)
+    setShowCreateProduct(false)
+    setToken('')
 navigate('/home')
 }
         return (
     <>
     <div className='containNav'>
-    <h2>Food <span>Recipes</span></h2>
+    <h2>Good <span>Food</span></h2>
    
    <div className='allLink'>
    {!showNavbar ?

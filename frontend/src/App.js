@@ -34,7 +34,7 @@ const [showHome, setShowHome] = useState(false)
 
   return (
     <div className="App">
-      <Navbar setShowHome={setShowHome} showNavbar={showNavbar} setProducts={setProducts} showcreateProduct={showcreateProduct} setShowCreateProduct={setShowCreateProduct} />
+      <Navbar setshowNavbar={setshowNavbar} setToken={setToken} setShowHome={setShowHome} showNavbar={showNavbar} setProducts={setProducts} showcreateProduct={showcreateProduct} setShowCreateProduct={setShowCreateProduct} />
      {ShowHome && <Home/>}
    {showHome &&  <NameUser storedName={storedName} />}
       <Routes>
@@ -44,7 +44,7 @@ const [showHome, setShowHome] = useState(false)
     <Route path="/list" element={<List setTitleList={setTitleList} setShoeHome={setShoeHome} token={token} setListIdOriginal={setListIdOriginal} />}/>
     <Route path="/product" element={<Products setTitleProduct={setTitleProduct} UserId={UserId} token={token} setFavorite={setFavorite} titleList={titleList} setProductDetalis={setProductDetalis}  setProducts={setProducts} ProductItem={ProductItem} listidOriginal={listidOriginal} setShowCreateProduct={setShowCreateProduct} showcreateProduct={showcreateProduct}/>}/>
     <Route path="/detalis" element={<Detalis titleProduct={titleProduct} setTitleProduct={setTitleProduct} productDetalis={productDetalis}/>}/>
-    <Route path="/addProduct" element={<AddProduct token={token}/>}/>
+    <Route path="/addProduct" element={<AddProduct message={message} showMessage={showMessage} setShowMessage={setShowMessage} setMessage={setMessage} token={token}/>}/>
     <Route path="/favorite" element={<Favorite  favorite={favorite}/>}/>
       </Routes>
     </div>

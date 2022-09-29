@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import './style.css'
 
-const AddProduct = ({token}) => {
+const AddProduct = ({message,showMessage,setShowMessage,setMessage,token}) => {
     
     const [nameFood, setnameFood] = useState('')
     const [avarage, setavarage] = useState('')
@@ -34,11 +34,15 @@ const AddProduct = ({token}) => {
     }
     )
     .then((result)=>{
-    console.log(result)
+    
+    setMessage(result.data.message)
+    setShowMessage(true)
     })
     .catch((err)=>{
         console.log(listId)
-  console.log(err)
+  
+  setMessage(err.response.data.message)
+  setShowMessage(true)
     })
 }
   
@@ -79,6 +83,7 @@ const AddProduct = ({token}) => {
 <div>
 <button className='createProduct' onClick={buttonCreateProduct}>Create Product </button>
 </div>
+{showMessage && message }
 </div>
     </>
   )
