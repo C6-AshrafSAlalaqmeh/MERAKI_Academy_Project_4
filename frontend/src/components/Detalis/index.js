@@ -8,16 +8,21 @@ const Detalis = ({productDetalis,titleProduct})=>{
     return(
     <>
     <h1>{`${titleProduct}`}</h1>
-   
+   <div className="contanirDetalis">
        <div className="itemDetalis">
-            <p>{productDetalis.nameFood}</p>
-            <p>{productDetalis.img}</p>
+           <div className="imgDetalis">
+           <p>{productDetalis.img}</p>
+           </div>
+           <div>
+            <p>{productDetalis.nameFood}</p>  
             <p>{productDetalis.avarage}</p>
+            </div>
+            <div className="stepsAndMethod">
             <p>{productDetalis.Ingredients}</p>
             <p>{productDetalis.Method}</p>
-            
+            </div>
        </div>   
-           
+       </div>   
         
     
     

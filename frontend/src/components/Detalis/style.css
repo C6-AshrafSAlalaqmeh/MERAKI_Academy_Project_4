@@ -1,2 +1,25 @@
+.contanirDetalis{
+    display: grid;
+    grid-template-columns: repeat(2 , 450px);
+    
+    gap: 10px;
+}
 
+.itemDetalis{
+    border: 1px solid;
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(2 , 250px);
+    height: 550px;
+}
 
+.imgDetalis{
+    width: 200px;
+    border: 1px solid;
+}
+
+.stepsAndMethod{
+    display: flex;
+    gap: 150px;
+    margin-left: 100px;
+}
