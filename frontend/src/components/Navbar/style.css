@@ -5,6 +5,19 @@
     align-items:center;
     height: 100px;
 }
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 200px;}
+}
+.divnavGood{
+    width: 200px;
+    position: relative;
+    animation: mymove 5s infinite;
+}
+.navGood{
+    animation-timing-function: linear;
+}
+
 .loginAndRedister{
     display: flex;
     gap: 30px;
@@ -18,7 +31,7 @@
     gap: 20px;
 }
 .search{
-    margin-left: 500px;
+    margin-left: 400px;
     
 }
 .searchAndinput{

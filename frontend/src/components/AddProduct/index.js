@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './style.css'
 
 const AddProduct = ({message,showMessage,setShowMessage,setMessage,token}) => {
@@ -14,6 +14,11 @@ const AddProduct = ({message,showMessage,setShowMessage,setMessage,token}) => {
     const [Prep, setPrep] = useState('')
     const [Cook, setCook] = useState('')
 
+    
+    useEffect(()=>{
+        setShowMessage(false)
+    },[])
+    
     const buttonCreateProduct =()=>{
     axios.post('http://localhost:5000/product',{
         nameFood,
@@ -72,7 +77,7 @@ const AddProduct = ({message,showMessage,setShowMessage,setMessage,token}) => {
 <div className='Select' >
 <select className='select' name='rating' onChange={(e)=>{setlistId(e.target.value) }}>
 
-<option>select </option>  
+<option> Choose one from the list </option>  
  <option value="63357abd76aaa110985f6df1">family meals </option>   
  <option value='63357b3676aaa110985f6df4'>Quick cakes </option>
  <option value='63357b9476aaa110985f6df7'>under-20-minutes </option>   

@@ -31,8 +31,9 @@ navigate('/home')
         return (
     <>
     <div className='containNav'>
-    <h2>Good <span>Food</span></h2>
-   
+        <div className='divnavGood'>
+    <h2 className='navGood'>Good <span>Food</span></h2>
+    </div>
    <div className='allLink'>
    {!showNavbar ?
     <div className='loginAndRedister'>
