@@ -16,7 +16,7 @@ const CreateFavorite =(req , res)=>{
      res.status(201).json(result)
     })
     .catch((err)=>{
-        console.log(err)
+        res.status(404).json(err)
     })
 }
 
@@ -30,10 +30,20 @@ const getFavorite =(req , res)=>{
     res.status(201).json({result : result})
     })
     .catch((err)=>{
-        console.log(err)
+        res.status(404).json(err)
     })
 }
 
+const deleteFavorite = (req , res)=>{
+  const favoriteId = req.params.id
+  favoriteModel.findOneAndDelete({_id:favoriteId})
+  .then((result)=>{
+    res.status(200).json(result)
+  })
+  .catch((err)=>{
+    res.status(404).json(err)
+  })
+}
 
 
-module.exports = { CreateFavorite , getFavorite}
+module.exports = { CreateFavorite , getFavorite, deleteFavorite}

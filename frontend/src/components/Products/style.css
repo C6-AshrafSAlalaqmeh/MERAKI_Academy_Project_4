@@ -20,17 +20,17 @@
     border: 1px solid;
     width: auto;
     display: flex;
-    height: 180px;
+    height: 190px;
 
 }
 .imgProduct{
-    width: 170px;
+    width: 180px;
     border: 1px solid;
     border-radius: 10px;
 }
 .pimg{
-    width: 170px;
-    height: 178px;
+    width: 180px;
+    height: 189px;
     border-radius: 10px;
 }
 
@@ -48,7 +48,7 @@
 }
 .p{
     margin-right: 690px;
-    width: 500px;
+    width: 400px;
     text-align: left;
 }
 .titAndAvarageAnddesc{
@@ -59,27 +59,28 @@
     margin-top: 50PX;
     display: flex;
     gap: 10px;
-    width: 200px;
+    width: 170px;
     margin-left: 30px;
     align-items: end;
 }
 .update{
-    width: 100px;
+    width: 70px;
     height: 50px;
 }
 .delete{
-    width: 100px;
+    width: 80px;
     height: 50px;
 }
 .favorite{
-    width: 150px;
+    width: 100px;
     height: 50px;
+    
 }
 .inputUpdate{
     display: grid;
     height: 100px;
     gap: 10px;
     margin-top: 15px;
-    margin-left: 200px;
+    margin-left: 100px;
     
 }

@@ -19,9 +19,8 @@ const Products = ({
   const [updateTitle, setUpdateTitle] = useState("");
   const [avarage, setAvarage] = useState("");
   const [desc, setDesc] = useState("");
-  const [showInputUpdate, setShowInputUpdate] = useState(false);
-  console.log(UserId);
-  console.log("DScA");
+ 
+  
 
   const navigate = useNavigate();
 
@@ -43,6 +42,7 @@ const Products = ({
   }, []);
 
   const buttonUpdate = (id) => {
+   console.log("aaa");
     axios
       .put(`http://localhost:5000/product/${id}`, {
         nameFood: updateTitle,
@@ -50,6 +50,7 @@ const Products = ({
         short_desc: desc,
       })
       .then((result) => {
+        
         const newProduct = ProductItem.map((elem)=>{
           if(elem._id === id){
             console.log(result.data.nameFood)
@@ -59,9 +60,10 @@ const Products = ({
           }
           return elem
         })
+        setProducts(newProduct)
         
-        getProduct();
       })
+      
       .catch((err) => {
         console.log(err);
       });
@@ -136,6 +138,9 @@ const Products = ({
                     <p className="pava">{elem.avarage}</p>
                     <p className="p"> {elem.short_desc}</p>
                   </div>
+
+
+               
                   <div className="inputUpdate">
                     <input
                       placeholder="Title"
@@ -144,7 +149,7 @@ const Products = ({
                       }}
                     />
                     <input
-                      placeholder="avarege"
+                      placeholder="avarege" type='number'
                       onChange={(e) => {
                         setAvarage(e.target.value);
                       }}
@@ -156,6 +161,7 @@ const Products = ({
                       }}
                     />
                   </div>
+                 
                   <div className="buttonUpdateAndDelete">
                     <button
                       className="update"
@@ -179,7 +185,7 @@ const Products = ({
                       className="favorite"
                       onClick={() => {
                         buttonAddFavorite(elem._id);
-                      }}
+                      }} 
                     >
                       Add Favorite{" "}
                     </button>
