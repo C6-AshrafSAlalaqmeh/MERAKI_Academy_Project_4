@@ -18,7 +18,7 @@ const List = ({ token , setListIdOriginal,setShoeHome,setTitleList }) => {
       })
       .then((result) => {
 
-        console.log(result.data.list[0]._id);
+        // console.log(result.data.list[0]._id);
         setList(result.data.list);
         
       })

@@ -23,7 +23,8 @@ const CreateFavorite =(req , res)=>{
 
 
 const getFavorite =(req , res)=>{
-    favoriteModel.find({})
+   const userId = req.params.id
+    favoriteModel.find({userid : userId})
     .populate('itemid')
     .exec()
     .then((result)=>{

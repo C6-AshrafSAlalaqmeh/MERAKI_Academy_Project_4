@@ -4,27 +4,34 @@ import './style.css'
 
 const Favorite = ({idFavorite,UserId,token,favorite}) => {
  const [favoriteItem, setFavoriteItem] = useState([])
-
+console.log(UserId);
 
 const getFavorite =()=>{
+
  // if(idFavorite === UserId)
-  axios.get('http://localhost:5000/favorite',{
+  axios.get(`http://localhost:5000/favorite/${UserId}`,{
     headers :{
       authorization : 'Bearer ' + token
     }
   })
 
   .then((result)=>{
- 
-   console.log(result.data.result)
-   setFavoriteItem(result.data.result)
- 
+    setFavoriteItem(result.data.result)
+    console.log(result.data.result)
+   
+  //  const item = favoriteItem.find((elem)=>{
+    // console.log(elem.Userid);
+    // console.log(elem.Userid);
+    // return elem.Userid == UserId
+  //})
+   
   })
   .catch((err)=>{
   console.log(err);
   })
 }
  useEffect(()=>{
+  if(!favoriteItem.length)
   getFavorite()
  },[])
 
