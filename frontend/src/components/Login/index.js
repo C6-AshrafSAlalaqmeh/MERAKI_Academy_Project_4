@@ -5,7 +5,7 @@ import './style.css'
 
 
 
-const Login = ({setShowHome,setUserId,setstoredName,setShowMessage,showMessage,message,setMessage,setShoeHome,setshowNavbar,setToken}) => {
+const Login = ({setHideNavbarUser,setshowNavbargeneral,setHidenavbaradmin,setshowAdmin,UserId,admin,setShowHome,setUserId,setstoredName,setShowMessage,showMessage,message,setMessage,setShoeHome,setshowNavbar,setToken}) => {
   setShoeHome(false)
  const [email , setEmail]= useState("")
 const [password , setPassword] = useState("")
@@ -19,13 +19,30 @@ const buttLogin=()=>{
     password
   })
   .then((result)=>{
+    if(result.data.userId === '63320180e54c7d861089cd17' ){
+      setshowAdmin(true)
+      setToken(result.data.Token)
+      setHidenavbaradmin(true)
+      setshowNavbargeneral(false)
+      setHideNavbarUser(false)
+      navigate('/admin')
+     console.log("hi")
+    }else{
   console.log(result.data.userId)
+  setUserId(result.data.userId)
   setToken(result.data.Token)
- navigate('/list')
+ 
  setshowNavbar(true)
  setstoredName(result.data.firstName)
- setUserId(result.data.userId)
+
  setShowHome(true)
+ console.log(UserId);
+ setshowNavbargeneral(false)
+ setHidenavbaradmin(false)
+ setHideNavbarUser(true)
+ navigate('/list')
+ 
+    }
   })
   .catch((err)=>{
     console.log(err.response.data.message)

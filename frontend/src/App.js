@@ -11,6 +11,9 @@ import Detalis from "./components/Detalis";
 import AddProduct from "./components/AddProduct";
 import NameUser from "./components/NameUser";
 import Favorite from "./components/Favorite";
+import Admin from "./components/Admin";
+import NavbarAdmin from "./components/NavbarAdmin";
+import NavbarGeneral from "./components/NabarGeneral";
 
 
 
@@ -31,15 +34,27 @@ const [UserId, setUserId] = useState('')
 const [titleProduct, setTitleProduct] = useState('')
 const [showHome, setShowHome] = useState(false)
 const [idFavorite, setidFavorite] = useState('')
+const [admin, setAdmin] = useState('63320180e54c7d861089cd17')
+const [showAdmin, setshowAdmin] = useState(false)
+const [showNavbargeneral, setshowNavbargeneral] = useState(true)
+const [hidenavbaradmin, setHidenavbaradmin] = useState(false)
+const [hideNavbarUser, setHideNavbarUser] = useState(false)
+
 
   return (
     <div className="App">
-      <Navbar setshowNavbar={setshowNavbar} setToken={setToken} setShowHome={setShowHome} showNavbar={showNavbar} setProducts={setProducts} showcreateProduct={showcreateProduct} setShowCreateProduct={setShowCreateProduct} />
+   {showNavbargeneral &&  <NavbarGeneral setHideNavbarUser={setHideNavbarUser} setHidenavbaradmin={setHidenavbaradmin}/>}
+  {hidenavbaradmin && <NavbarAdmin setshowNavbargeneral={setshowNavbargeneral} setHideNavbarUser={setHideNavbarUser} setHidenavbaradmin={setHidenavbaradmin} setShowCreateProduct={setShowCreateProduct} showcreateProduct={showcreateProduct} setToken={setToken} setShowHome={setShowHome} setProducts={setProducts} />}
+   {hideNavbarUser && <Navbar setshowNavbargeneral={setshowNavbargeneral} setHidenavbaradmin={setHidenavbaradmin} setHideNavbarUser={setHideNavbarUser} showAdmin={showAdmin} setshowNavbar={setshowNavbar} setToken={setToken} setShowHome={setShowHome} showNavbar={showNavbar} setProducts={setProducts} showcreateProduct={showcreateProduct} setShowCreateProduct={setShowCreateProduct} /> }
      {ShowHome && <Home/>}
+     
    {showHome &&  <NameUser storedName={storedName} />}
       <Routes>
+      
+      <Route path="/admin" element={<Admin setHidenavbaradmin={setHidenavbaradmin} />}/>
+    
     <Route path="/home" element={<Home/>}/>
-    <Route path="/login" element={<Login setShowHome={setShowHome} setUserId={setUserId} setstoredName={setstoredName} showMessage={showMessage} setShowMessage={setShowMessage} message={message} setMessage={setMessage} setShoeHome={setShoeHome} setshowNavbar={setshowNavbar} setToken={setToken} />}/>
+    <Route path="/login" element={<Login setHideNavbarUser={setHideNavbarUser} setshowNavbargeneral={setshowNavbargeneral} setHidenavbaradmin={setHidenavbaradmin} setshowAdmin={setshowAdmin} UserId={UserId} admin={admin} setShowHome={setShowHome} setUserId={setUserId} setstoredName={setstoredName} showMessage={showMessage} setShowMessage={setShowMessage} message={message} setMessage={setMessage} setShoeHome={setShoeHome} setshowNavbar={setshowNavbar} setToken={setToken} />}/>
     <Route path="/register" element={<Register showMessage={showMessage} setShowMessage={setShowMessage} message={message} setMessage={setMessage} setShoeHome={setShoeHome}/>}/>
     <Route path="/list" element={<List setTitleList={setTitleList} setShoeHome={setShoeHome} token={token} setListIdOriginal={setListIdOriginal} />}/>
     <Route path="/product" element={<Products setidFavorite={setidFavorite} setTitleProduct={setTitleProduct} UserId={UserId} token={token} setFavorite={setFavorite} titleList={titleList} setProductDetalis={setProductDetalis}  setProducts={setProducts} ProductItem={ProductItem} listidOriginal={listidOriginal} setShowCreateProduct={setShowCreateProduct} showcreateProduct={showcreateProduct}/>}/>

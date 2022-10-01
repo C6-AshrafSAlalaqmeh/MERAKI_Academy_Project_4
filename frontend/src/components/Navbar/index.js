@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import './style.css'
 
-const Navbar = ({setshowNavbar,setToken,setShowHome,showNavbar , showcreateProduct ,setShowCreateProduct,setProducts})=>{
+const Navbar = ({ setshowNavbargeneral,setHidenavbaradmin,setHideNavbarUser,showAdmin,setshowNavbar,setToken,setShowHome,showNavbar , showcreateProduct ,setShowCreateProduct,setProducts})=>{
     const [inputSearch , setInputSearch] = useState('')
 
     const navigate = useNavigate()
@@ -25,6 +25,10 @@ const logout =()=>{
     setShowHome(false)
     setshowNavbar(false)
     setShowCreateProduct(false)
+    setHideNavbarUser(false)
+    setHidenavbaradmin(false)
+    setshowNavbargeneral(true)
+    
     setToken('')
 navigate('/home')
 }
@@ -45,7 +49,7 @@ navigate('/home')
     
     <Link  className='home' to ='/list'>Home</Link>
     <Link  className='fav' to ='/favorite'>Favorite</Link>
-   {showcreateProduct && <Link className='addPro' to ='/addProduct' >Create Product</Link>}
+   {showAdmin && showcreateProduct && <Link className='addPro' to ='/addProduct' >Create Product</Link>}
    <button  onClick={()=> logout()} className="logout">Logout</button> 
     </div>
 
