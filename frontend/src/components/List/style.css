@@ -21,7 +21,8 @@
 } */
 .titleList{
     cursor: pointer;
-    color: rgb(223, 219, 202);
+    color: yellow;
+    /* color: rgb(223, 219, 202); */
     background-color: rgb(74, 74, 95 , 0.5);
     height: 70px;
     align-content: start;

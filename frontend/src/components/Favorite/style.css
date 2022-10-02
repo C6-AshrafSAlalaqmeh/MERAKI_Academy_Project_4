@@ -1,24 +1,36 @@
-.contanirProduct{
+.contanirfavorite{
     display: grid;
-    grid-template-columns: repeat(1 , 450px);
+    grid-template-columns: repeat(2 , 650px);
     
     gap: 10px;
     
 }
 
 .itemFavorite{
-    border: 1px solid;
-    width: 700px;
+    /* border: 1px solid; */
+    width: 600px;
     display: flex;
-    height: auto;
+    height: 190px;
+    margin-top: 40px;
+    border-style: outset;
 
 }
 .imgFavorite{
-    width: 170px;
-    height: 180px;
+    width: 180px;
+    height: 190px;
 }
 .divbuttonFavorite{
     width: 300px;
-    margin-left: 300px;
     
+    
+    
+}
+.buttondeleteFavorite{
+   width: 100px;
+   margin-left: ;
+}
+.pfavorite{
+    margin-right: 690px;
+    width: 380px;
+    text-align: left;
 }

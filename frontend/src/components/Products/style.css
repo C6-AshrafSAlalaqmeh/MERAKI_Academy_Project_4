@@ -11,7 +11,7 @@
     
 }
 .tit{
-    width: 200px;
+    width: 300px;
     
 }
 
@@ -22,17 +22,18 @@
     display: flex;
     height: 190px;
     border-style: outset;
+    background-color: rgb(201, 150, 150 , 0.4);
 
 }
 .imgProduct{
     width: 180px;
-    border: 1px solid;
-    border-radius: 10px;
+    /* border: 1px solid; */
+    /* border-radius: 10px; */
 }
 .pimg{
     width: 180px;
     height: 189px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .products{
@@ -44,8 +45,10 @@
 .ptit{
     margin-right: 690px;
     cursor: pointer;
-    width: 280px;
+    width: 350px;
     text-align: left;
+    color: rgb(97, 97, 18);
+    font-size: 25px;
 }
 .p{
     margin-right: 690px;

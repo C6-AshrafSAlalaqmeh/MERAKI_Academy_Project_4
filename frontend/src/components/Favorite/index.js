@@ -62,19 +62,23 @@ const getFavorite =()=>{
 
 
   return (
-    <div className='contanirProduct'>
+    <div className='contanirfavorite'>
   {favoriteItem.length && favoriteItem.map((elem)=>{
     return (
       <div className='itemFavorite'>
+        <div>
       <img className='imgFavorite' src={`${elem.itemid.img}`}/>
+      </div>
       <div className='titAndAvarageAnddesc' >
       <p className="ptit"> {elem.itemid.nameFood}</p>
       <p className="pava"> {elem.itemid.avarage}</p>
-      <p className="p"> {elem.itemid.short_desc}</p>
+      <p className="pfavorite"> {elem.itemid.short_desc}</p>
+      </div>
+      
      <div className='divbuttonFavorite'>
      <button className='buttondeleteFavorite' onClick={()=>{deleteItem(elem._id)}} > Delete Favorite </button>
      </div>
-      </div>
+      
       
       </div>
     )
