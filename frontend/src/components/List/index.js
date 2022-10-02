@@ -32,9 +32,7 @@ const List = ({ storedName,token , setListIdOriginal,setShoeHome,setTitleList })
 
   return (
     <div className="backgroundlist">
-       <div className='nameUser'>
-      <h1> Welcome : {`${storedName}`}</h1>
-      </div>
+      
     <div className="contanirList">
       
       {lists.length &&
@@ -43,13 +41,16 @@ const List = ({ storedName,token , setListIdOriginal,setShoeHome,setTitleList })
           return (
             <div className="itemList">
               <div className="titleList">
-              <h1 onClick={() =>{ navigate("/product");setListIdOriginal(elem._id);setTitleList(elem.typeFood) }}>{elem.typeFood}</h1>
+              <h1 className="titlist" onClick={() =>{ navigate("/product");setListIdOriginal(elem._id);setTitleList(elem.typeFood) }}>{elem.typeFood}</h1>
               </div>
               <img className="imagList" src={`${elem.img}`} />
             </div>
           );
         })}
     </div>
+    <div className='nameUser'>
+      <h1> Welcome : {`${storedName}`}</h1>
+      </div>
     </div>
   );
 };

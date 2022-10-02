@@ -70,7 +70,7 @@ const Navbar = ({
                 Favorite
               </Link>
            
-              <button onClick={() => logout()} className="logout">
+              <button  onClick={() => logout()} className="logout">
                 Logout
               </button>
             </div>
@@ -86,7 +86,7 @@ const Navbar = ({
                   setInputSearch(e.target.value);
                 }}
               ></input>
-              <button onClick={buttonSearch}>Search</button>
+              <button className="buttonsearch" onClick={buttonSearch}>Search</button>
             </div>
           )}
         </div>

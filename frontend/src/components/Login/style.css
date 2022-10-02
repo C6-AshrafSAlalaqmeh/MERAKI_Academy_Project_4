@@ -1,7 +1,7 @@
 .backgroundimg{
 background-image: url('https://static2.bigstockphoto.com/0/4/3/large1500/340593394.jpg');
 background-size: cover; 
-height: 600px;
+height: 720px;
 align-items: center;
 padding-top: 0px;
 display: flex;
@@ -17,6 +17,7 @@ display: flex;
     border: 1px solid white;
     margin-left: 300px;
     border-radius: 7px;
+    margin-bottom: 90px;
     
 }
 .buttonlogReg{

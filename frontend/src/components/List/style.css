@@ -4,6 +4,7 @@
     justify-content: center;
     /* margin-top: 50px; */
     gap: 50px;
+    padding-top: 50px;
 }
 
 .itemList{
@@ -11,15 +12,22 @@
     border-style: outset;
     width: 250px;
     height: 330px;
+    display: grid;
+    
     
 }
-
+/* .titlist{
+   
+} */
 .titleList{
     cursor: pointer;
     color: rgb(223, 219, 202);
-
+    background-color: rgb(74, 74, 95 , 0.5);
+    height: 70px;
+    align-content: start;
+   
 }
-.titleList:hover{
+.titlist:hover{
     transform:scale(1.08 );
     transition: transform .5s ;
    
@@ -27,13 +35,13 @@
 }
 
 .imagList{
-    height: 250px;
+    height: 260px;
     width: 250px;
 }
 
 .backgroundlist{
     background-image: url('https://static2.bigstockphoto.com/0/4/3/large1500/340593394.jpg');
-    height: 600px;
+    height: 690px;
     padding-top: 20px;
     display: grid;
    
