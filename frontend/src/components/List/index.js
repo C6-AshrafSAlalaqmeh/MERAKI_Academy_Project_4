@@ -31,6 +31,7 @@ const List = ({ token , setListIdOriginal,setShoeHome,setTitleList }) => {
   }, []);
 
   return (
+    <div className="backgroundlist">
     <div className="contanirList">
       
       {lists.length &&
@@ -45,6 +46,7 @@ const List = ({ token , setListIdOriginal,setShoeHome,setTitleList }) => {
             </div>
           );
         })}
+    </div>
     </div>
   );
 };

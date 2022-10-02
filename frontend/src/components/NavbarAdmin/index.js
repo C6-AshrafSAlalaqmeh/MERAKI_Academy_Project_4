@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import './style.css'
 import { Link, useNavigate } from "react-router-dom";
 const axios = require("axios");
+ 
+
 
 const NavbarAdmin = ({
   setShowName,
@@ -56,7 +59,7 @@ navigate('/home')
             <Link className="addPro" to="/addProduct">
               Create Product
             </Link>
-            <button onClick={()=>logout()} className="logout">
+            <button className="buttonInAdmin" onClick={()=>logout()} >
               Logout
             </button>
           </div>
@@ -72,7 +75,7 @@ navigate('/home')
                   setInputSearch(e.target.value);
                 }}
               ></input>
-              <button onClick={buttonSearch}>Search</button>
+              <button  onClick={buttonSearch}>Search</button>
             </div>
           )}
         </div>

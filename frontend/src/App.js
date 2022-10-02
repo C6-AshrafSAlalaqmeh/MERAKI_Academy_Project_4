@@ -75,13 +75,13 @@ function App() {
       )}
       {ShowHome && <Home />}
 
-      {showName && <NameUser storedName={storedName} />}
+     
       <Routes>
         <Route
           path="/admin"
           element={<Admin setHidenavbaradmin={setHidenavbaradmin} />}
         />
-
+       
         <Route path="/home" element={<Home />} />
         <Route
           path="/login"

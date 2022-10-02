@@ -112,6 +112,7 @@ const Products = ({
   };
 
   return (
+    <div className="backgroundproduct">
     <div className="contanirProduct">
       <div className="titleProduct">
         <h1 className="tit">{`${titleList}`}</h1>
@@ -204,6 +205,7 @@ const Products = ({
             }
           })}
       </div>
+    </div>
     </div>
   );
 };
