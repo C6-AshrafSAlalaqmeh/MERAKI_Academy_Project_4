@@ -7,6 +7,7 @@ const Products = ({
   setTitleProduct,
   UserId,
   token,
+  admin,
   setFavorite,
   titleList,
   setProductDetalis,
@@ -141,7 +142,10 @@ const Products = ({
                   </div>
 
 
-               
+
+               if(UserId === admin){}
+
+
                   <div className="inputUpdate">
                     <input
                       placeholder="Title"
@@ -181,6 +185,9 @@ const Products = ({
                       Delete
                     </button>
                   </div>
+            
+                 
+                 
                   <div>
                     <button
                       className="favorite"
