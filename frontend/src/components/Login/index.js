@@ -86,8 +86,8 @@ const Login = ({
           placeholder="Email"
           
           onChange={(e) => {
-            setEmail(e.target.value);
-            showMessage(false)
+            setEmail(e.target.value)
+            
           }}
         />
         <input

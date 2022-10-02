@@ -17,10 +17,11 @@
 
 .itemProduct{
     /* margin-right: 500px; */
-    border: 1px solid;
-    width: auto;
+    border: 2px solid;
+    width: 900px;
     display: flex;
     height: 190px;
+    border-style: outset;
 
 }
 .imgProduct{
@@ -48,7 +49,7 @@
 }
 .p{
     margin-right: 690px;
-    width: 400px;
+    width: 320px;
     text-align: left;
 }
 .titAndAvarageAnddesc{
@@ -60,7 +61,7 @@
     display: flex;
     gap: 10px;
     width: 170px;
-    margin-left: 30px;
+    margin-left: 31px;
     align-items: end;
 }
 .update{
@@ -81,10 +82,10 @@
     height: 100px;
     gap: 10px;
     margin-top: 15px;
-    margin-left: 100px;
+    margin-left: 30px;
     
 }
 .backgroundproduct{
-    background-image: url('https://st2.depositphotos.com/1013886/10274/i/950/depositphotos_102745280-stock-photo-healthy-eating-background-studio-photo.jpg');
+    background-image: url('');
     background-size: cover;
 }

@@ -48,7 +48,7 @@ const Navbar = ({
       <div className="containNav">
         <div className="divnavGood">
           <h2 className="navGood">
-            Good <span>Food</span>
+            Good <span className="food">Food</span>
           </h2>
         </div>
         <div className="allLink">

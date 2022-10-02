@@ -87,29 +87,7 @@ const Products = ({
     });
   };
 
-  const buttonAddFavorite = (ElemntId) => {
-    
-    axios
-      .post(
-        "http://localhost:5000/favorite",
-        {
-          itemid: ElemntId, //elem._id
-          userid: UserId,
-        },
-        {
-          headers: {
-            authorization: "Bearer " + token,
-          },
-        }
-      )
-      .then((result) => {
-        console.log(result.data.userid);
-        setidFavorite(result.data.userid)
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+ 
 
   return (
     <div className="backgroundproduct">
@@ -190,16 +168,7 @@ const Products = ({
             
                   </>
                )}
-                  <div>
-                    <button
-                      className="favorite"
-                      onClick={() => {
-                        buttonAddFavorite(elem._id);
-                      }} 
-                    >
-                      Add Favorite{" "}
-                    </button>
-                  </div>
+                
                 </div>
               );
             }

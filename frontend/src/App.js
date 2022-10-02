@@ -74,7 +74,7 @@ function App() {
         />
       )}
       {ShowHome && <Home />}
-
+      {/* {showName && <NameUser storedName={storedName}/>}   */}
      
       <Routes>
         <Route
@@ -126,6 +126,7 @@ function App() {
               setShoeHome={setShoeHome}
               token={token}
               setListIdOriginal={setListIdOriginal}
+              storedName={storedName}
             />
           }
         />

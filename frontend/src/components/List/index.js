@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import './style.css'
 
 
-const List = ({ token , setListIdOriginal,setShoeHome,setTitleList }) => {
+const List = ({ storedName,token , setListIdOriginal,setShoeHome,setTitleList }) => {
   setShoeHome(false)
   const [lists, setList] = useState([]);
   const navigate = useNavigate();
@@ -32,6 +32,9 @@ const List = ({ token , setListIdOriginal,setShoeHome,setTitleList }) => {
 
   return (
     <div className="backgroundlist">
+       <div className='nameUser'>
+      <h1> Welcome : {`${storedName}`}</h1>
+      </div>
     <div className="contanirList">
       
       {lists.length &&
