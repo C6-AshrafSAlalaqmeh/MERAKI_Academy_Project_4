@@ -1,0 +1,22 @@
+.Componethome{
+    background-image:url('https://static2.bigstockphoto.com/0/4/3/large1500/340593394.jpg');
+    background-size: cover; 
+    height: 900px;
+}
+.logregGeneral{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+.loggeneral{
+margin-top: 140px;
+text-decoration: none;
+color: rgb(203, 241, 64);
+font-size: 40px;
+}
+.reggeneral{
+    margin-top: 140px;
+    text-decoration: none;
+    color: rgb(203, 241, 64);
+    font-size: 40px;
+}

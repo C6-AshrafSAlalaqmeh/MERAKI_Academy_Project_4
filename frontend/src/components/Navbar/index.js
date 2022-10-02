@@ -80,7 +80,7 @@ const Navbar = ({
               <input
                 className="search"
                 type="text"
-                placeholder="Search"
+                placeholder="Search Name Food"
                 aria-label="Search"
                 onChange={(e) => {
                   setInputSearch(e.target.value);

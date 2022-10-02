@@ -1,23 +1,51 @@
+.imgregister{
+    background-image: url('https://static2.bigstockphoto.com/0/4/3/large1500/340593394.jpg');
+    height: 600px;
+    padding-top: 0px;
+    display: flex;
+    align-items: center;
+}
 .contanirReg{
     width: 600px;
     height: 400px;
     display: grid;
     border-radius: 7px;
     border: 1px solid;
-    margin-top: 60px;
-    margin-left: 380px;
+    margin-left: 300px;
+    border: 1px solid white;
 
+
+}
+.buttonlogReginreg{
+    font-size: 50px;
+    display: grid;
+    margin-bottom: 220px;
+    text-align: left;
+}
+.loginreg{
+    color: yellow;
+    text-decoration: none;
+    margin-left: 100px;
+    
+}
+.reginreg{
+    color: yellow;
+    text-decoration: none;
+    margin-left: 100px;
 }
 .inputsRegister{
     display: grid;
     width: 400px;
-    height: 200px;
+    height: 230px;
     margin-left: 120px;
     gap: 10px;
+    
+    
 }
 .titleRegister{
     justify-self: left;
     margin-left: 20px;
+    color: yellow;
 }
 .buttonRegister{
     font-size: 20px;
@@ -25,8 +53,9 @@
     height: 50px ;
     border-radius: 6px;
     border: 0px;
-    background-color: rgb(196, 173, 218);
+    background-color: rgb(26, 175, 143);
     cursor: pointer;
+    
     
 }
 

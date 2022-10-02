@@ -21,7 +21,7 @@ const register = (req , res) =>{
     registerInstance.save()
     .then((result)=>{
      res.status(200)
-     res.json({success : true , message :'Account Created Successfully', author:result })
+     res.json({success : true , message :'Account Created Successfully Please Login', author:result })
     })
     .catch((err)=>{
       if(err.keyPattern){

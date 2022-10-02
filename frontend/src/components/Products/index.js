@@ -18,6 +18,7 @@ const Products = ({
   setProducts,
   setidFavorite
 }) => {
+
   const [updateTitle, setUpdateTitle] = useState("");
   const [avarage, setAvarage] = useState("");
   const [desc, setDesc] = useState("");
@@ -52,7 +53,7 @@ const Products = ({
         short_desc: desc,
       })
       .then((result) => {
-        
+       console.log("rrrr");
         const newProduct = ProductItem.map((elem)=>{
           if(elem._id === id){
             console.log(result.data.nameFood)
@@ -143,9 +144,9 @@ const Products = ({
 
 
 
-               if(UserId === admin){}
-
-
+               {UserId === admin && (
+                 
+                  <>
                   <div className="inputUpdate">
                     <input
                       placeholder="Title"
@@ -186,8 +187,8 @@ const Products = ({
                     </button>
                   </div>
             
-                 
-                 
+                  </>
+               )}
                   <div>
                     <button
                       className="favorite"

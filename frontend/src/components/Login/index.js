@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 
 const Login = ({
@@ -21,6 +21,7 @@ const Login = ({
   setshowNavbar,
   setToken,
 }) => {
+  
   setShoeHome(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -40,8 +41,11 @@ const Login = ({
           setHidenavbaradmin(true);
           setshowNavbargeneral(false);
           setHideNavbarUser(false);
-          navigate("/admin");
-          console.log("hi");
+          setUserId(result.data.userId);
+          setstoredName(result.data.firstName);
+          setShowName(true);
+          navigate("/list");
+          
         } else {
           console.log(result.data.userId);
           setUserId(result.data.userId);
@@ -66,6 +70,11 @@ const Login = ({
   };
 
   return (
+    <div className="backgroundimg">
+      <div className="buttonlogReg">
+      <Link className='loginlog' to='/login'> Login</Link>
+    <Link className='reginlog' to='/register'> Register</Link>
+      </div>
     <div className="containerLogin">
       <div className="titleLogin">
         <h1>Login :</h1>
@@ -75,8 +84,10 @@ const Login = ({
           className="inputEmail"
           type="email"
           placeholder="Email"
+          
           onChange={(e) => {
             setEmail(e.target.value);
+            showMessage(false)
           }}
         />
         <input
@@ -94,7 +105,10 @@ const Login = ({
           Login
         </button>
       </div>
-      {showMessage && message}
+     
+      {showMessage && <div className="message">{ message}</div>}
+      
+    </div>
     </div>
   );
 };

@@ -40,12 +40,12 @@ function App() {
 
   return (
     <div className="App">
-      {showNavbargeneral && (
+      {/* {showNavbargeneral && (
         <NavbarGeneral
           setHideNavbarUser={setHideNavbarUser}
           setHidenavbaradmin={setHidenavbaradmin}
         />
-      )}
+      )} */}
       {hidenavbaradmin && (
         <NavbarAdmin
           setshowNavbargeneral={setshowNavbargeneral}

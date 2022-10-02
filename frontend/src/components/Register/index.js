@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import './style.css'
 
 const Register = ({showMessage,setShowMessage,message,setMessage,setShoeHome}) => {
   setShoeHome(false)
+  const navigate = useNavigate()
   const [firstName , setFirstName]=useState("")
   const [lastName , setLastName]=useState("")
   const [Phone , setPhone]=useState("")
@@ -24,6 +26,7 @@ const buttonregister =()=>{
   .then((result)=>{
   setMessage(result.data.message)
   setShowMessage(true)
+  navigate('/login')
   })
   .catch((err)=>{
 
@@ -35,6 +38,11 @@ const buttonregister =()=>{
 
 
   return (
+    <div className="imgregister">
+       <div className="buttonlogReginreg">
+      <Link className='loginreg' to='/login'> Login</Link>
+    <Link className='reginreg' to='/register'> Register</Link>
+      </div>
   <div className="contanirReg">
   <div className="titleRegister">
   <h2>Register :</h2>
@@ -50,7 +58,10 @@ const buttonregister =()=>{
     <div >
      <button className="buttonRegister" onClick={buttonregister}> Register</button>
      </div>
-    {showMessage && message }
-    </div>)
+    {showMessage && <div className="message">{message}</div> }
+    </div>
+    </div>
+    )
+    
 };
 export default Register;
