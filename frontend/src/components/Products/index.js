@@ -29,7 +29,7 @@ const Products = ({
   const [avarage, setAvarage] = useState("");
   const [desc, setDesc] = useState("");
   const [currentPage, setCurrentPage] = useState(1)
-  const [postsPerPage] = useState(10)
+  const [postsPerPage] = useState(7)
 
  
 
@@ -145,6 +145,7 @@ const count=[]
 
 
   return (
+    <>
     <div className="backgroundproduct">
     <div className="contanirProduct">
       <div className="titleProduct">
@@ -162,8 +163,7 @@ const count=[]
             if (listidOriginal === elem.listId) {
              
               count.push(elem)
-              console.log(ProductItem.length);
-              console.log(count.length);
+             
               // setProductlength(ProductItem.length)
               return (
                 <div className="itemProduct">
@@ -257,6 +257,7 @@ const count=[]
     <Pagination postsPerPage={postsPerPage} totalProductitem={ProductItem.length} paginate={paginate}/>
     </div>
     </div>
+    </>
   );
 };
 export default Products;

@@ -1,0 +1,31 @@
+.pagenation{
+    display: flex;
+    gap: 0px;
+    border: 1px solid #ddd;
+    width: 90px ;
+    height: 25px;
+    margin-left: 500px;
+   
+    
+}
+.count{
+    width: 30px;
+    height: 25px;
+    transition: background-color .3s;
+    /* border-radius: 5px; */
+    cursor: pointer;
+    border: 1px solid #ddd;
+    margin-top: 0px;
+    color: white;
+
+}
+.count:hover {
+    background-color: #ddd;
+    color: black;
+    
+}
+.count:active {
+    background-color: #4CAF50;
+    color: black;
+  }
+ 

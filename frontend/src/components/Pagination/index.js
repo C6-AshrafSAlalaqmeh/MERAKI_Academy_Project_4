@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import './style.css'
+
 
 const Pagination = ({postsPerPage ,totalProductitem , paginate}) => {
  const pageNumbers = []
@@ -6,11 +8,10 @@ const [pageNumber, setPageNumber] = useState([])
 
 
 //  useEffect(()=>{
-    console.log(totalProductitem / postsPerPage);
-    console.log(totalProductitem);
+   
     
     for(let i= 1; i<= Math.floor(totalProductitem / postsPerPage); i++){
-      console.log(i);
+      
         pageNumbers.push(i)
      }
 
@@ -18,30 +19,30 @@ const [pageNumber, setPageNumber] = useState([])
 
  
     return (
-    <nav>
+    <div >
     <div>Pagination</div>
-    
+    <div className='pagenation'>
   {pageNumbers.map((number)=>{
 return (
-<div>
+
  
-  <a onClick={()=>paginate(number)} href='#'>{number}</a>
+  <p className='count' onClick={()=>paginate(number)} href='#'>{number}</p>
   
 
 
 
 
-</div>)
+)
     
 
   })}
  
 
+ </div>
 
 
 
-
-    </nav>
+    </div>
   )
 }
 
