@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
+import ReactStars from 'react-rating-stars-component';
+
 
 const Products = ({
   setTitleProduct,
@@ -22,8 +24,12 @@ const Products = ({
   const [updateTitle, setUpdateTitle] = useState("");
   const [avarage, setAvarage] = useState("");
   const [desc, setDesc] = useState("");
- 
+  const [stars, setStars] = useState('')
+
+
   
+ 
+   
 
   const navigate = useNavigate();
 
@@ -39,9 +45,9 @@ const Products = ({
   };
   useEffect(() => {
     setShowCreateProduct(true);
-    // if (ProductItem.length) {
+  
       getProduct();
-    // }
+    
   }, []);
 
   const buttonUpdate = (id) => {
@@ -120,7 +126,12 @@ const Products = ({
       <div className="products">
         {ProductItem.length &&
           ProductItem.map((elem) => {
-            //  setFavorite(elem._id)
+            const stars = {
+              size: 25,
+              value: elem.avarage,
+              edit: false
+            };
+            
             if (listidOriginal === elem.listId) {
               return (
                 <div className="itemProduct">
@@ -139,7 +150,10 @@ const Products = ({
                     >
                       {elem.nameFood}
                     </p>
-                    <p className="pava">{elem.avarage}</p>
+                    <p className="pava"> 
+                     <ReactStars {...stars} />
+                     </p>    
+                    {/* <p className="pava">{elem.avarage}</p> */}
                     <p className="p"> {elem.short_desc}</p>
                   </div>
 
@@ -191,6 +205,7 @@ const Products = ({
                   </>
                 )}
                 {UserId !== admin && (
+                  
                   <div>
                     <button
                       className="favorite"

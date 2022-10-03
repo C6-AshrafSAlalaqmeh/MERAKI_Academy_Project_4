@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './style.css'
+import ReactStars from 'react-rating-stars-component';
+
 
 const Favorite = ({idFavorite,UserId,token,favorite}) => {
  const [favoriteItem, setFavoriteItem] = useState([])
@@ -64,6 +66,11 @@ const getFavorite =()=>{
   return (
     <div className='contanirfavorite'>
   {favoriteItem.length && favoriteItem.map((elem)=>{
+     const stars = {
+      size: 25,
+      value: elem.itemid.avarage,
+      edit: false
+    };
     return (
       <div className='itemFavorite'>
         <div>
@@ -71,7 +78,8 @@ const getFavorite =()=>{
       </div>
       <div className='titAndAvarageAnddesc' >
       <p className="ptit"> {elem.itemid.nameFood}</p>
-      <p className="pava"> {elem.itemid.avarage}</p>
+      {/* <p className="pava"> {elem.itemid.avarage}</p> */}
+       <ReactStars {...stars} />
       <p className="pfavorite"> {elem.itemid.short_desc}</p>
       </div>
       

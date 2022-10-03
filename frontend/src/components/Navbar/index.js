@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 
+
+
 const Navbar = ({
   setshowNavbargeneral,
   setHidenavbaradmin,
@@ -17,6 +19,10 @@ const Navbar = ({
   setProducts,
 }) => {
   const [inputSearch, setInputSearch] = useState("");
+
+
+   
+  
 
   const navigate = useNavigate();
 
@@ -50,6 +56,7 @@ const Navbar = ({
           <h2 className="navGood">
             Good <span className="food">Food</span>
           </h2>
+         
         </div>
         <div className="allLink">
           {!showNavbar ? (

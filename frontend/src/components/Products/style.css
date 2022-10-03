@@ -49,6 +49,10 @@
     text-align: left;
     color: rgb(97, 97, 18);
     font-size: 25px;
+    height: 8px;
+}
+.pava{
+height: 28px;
 }
 .p{
     margin-right: 690px;
@@ -58,6 +62,7 @@
 .titAndAvarageAnddesc{
     width: 300px;
     margin-left: 20px;
+  
 }
 .buttonUpdateAndDelete{
     margin-top: 50PX;
@@ -86,7 +91,7 @@
     height: 100px;
     gap: 10px;
     margin-top: 15px;
-    margin-left: 30px;
+    margin-left: 34px;
     
 }
 .backgroundproduct{
