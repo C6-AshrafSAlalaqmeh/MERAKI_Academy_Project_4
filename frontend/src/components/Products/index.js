@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 import ReactStars from 'react-rating-stars-component';
+import Pagination from "../Pagination";
 
 
 const Products = ({
@@ -18,14 +19,19 @@ const Products = ({
   setShowCreateProduct,
   ProductItem,
   setProducts,
-  setidFavorite
+  setidFavorite,
+  
+ 
+
 }) => {
 
   const [updateTitle, setUpdateTitle] = useState("");
   const [avarage, setAvarage] = useState("");
   const [desc, setDesc] = useState("");
-  const [stars, setStars] = useState('')
+  const [currentPage, setCurrentPage] = useState(1)
+  const [postsPerPage] = useState(10)
 
+ 
 
   
  
@@ -93,6 +99,16 @@ const Products = ({
     });
   };
 
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = ProductItem.slice(indexOfFirstPost, indexOfLastPost)
+  const paginate = (pageNumber)=>{
+    setCurrentPage(pageNumber)
+  }
+  
+
+
+
   const buttonAddFavorite = (ElemntId) => {
     
     axios
@@ -117,6 +133,17 @@ const Products = ({
       });
   };
 
+
+
+
+
+
+const [productlength, setProductlength] = useState([])
+
+
+const count=[]
+
+
   return (
     <div className="backgroundproduct">
     <div className="contanirProduct">
@@ -124,8 +151,8 @@ const Products = ({
         <h1 className="tit">{`${titleList}`}</h1>
       </div>
       <div className="products">
-        {ProductItem.length &&
-          ProductItem.map((elem) => {
+        {currentPosts.length &&
+          currentPosts.map((elem) => {
             const stars = {
               size: 25,
               value: elem.avarage,
@@ -133,6 +160,11 @@ const Products = ({
             };
             
             if (listidOriginal === elem.listId) {
+             
+              count.push(elem)
+              console.log(ProductItem.length);
+              console.log(count.length);
+              // setProductlength(ProductItem.length)
               return (
                 <div className="itemProduct">
                   <div className="imgProduct">
@@ -222,6 +254,7 @@ const Products = ({
             }
           })}
       </div>
+    <Pagination postsPerPage={postsPerPage} totalProductitem={ProductItem.length} paginate={paginate}/>
     </div>
     </div>
   );
