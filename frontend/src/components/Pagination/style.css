@@ -4,7 +4,7 @@
     border: 1px solid #ddd;
     width: 90px ;
     height: 25px;
-    margin-left: 500px;
+    margin-left: 600px;
    
     
 }
@@ -24,8 +24,6 @@
     color: black;
     
 }
-.count:active {
+.count:visited{
     background-color: #4CAF50;
-    color: black;
-  }
- 
+}

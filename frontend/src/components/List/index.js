@@ -71,18 +71,7 @@ const List = ({ productList,storedName,token , setListIdOriginal,setShoeHome,set
   
   
   <ProductInList />
-  {/* <Pagination postsPerPage={postsPerPage} totalProductitem={currentPosts} paginate={paginate}/> */}
-  {/* {productList.length &&
-    productList.map((elem)=>{
-      return (
-        <>
-         <img className="pimg" src={`${elem.img}`} />
-        
-        
-        
-        </>
-      )
-    })} */}
+ 
   
   
   

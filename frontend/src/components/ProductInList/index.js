@@ -32,9 +32,9 @@ const ProductInList = () => {
       const indexOfLastPost = currentPage * postsPerPage;
       const indexOfFirstPost = indexOfLastPost - postsPerPage;
       const currentPosts = productList.slice(indexOfFirstPost, indexOfLastPost)
-       //   const paginate = (pageNumber)=>{
-       //     setCurrentPage(pageNumber)
-       //   }
+         const paginate = (pageNumber)=>{
+           setCurrentPage(pageNumber)
+         }
 
      
   return (
@@ -79,7 +79,7 @@ const ProductInList = () => {
                 
                  
        
-<Pagination postsPerPage={postsPerPage} totalProduct={productList.length}/>
+<Pagination postsPerPage={postsPerPage} totalProduct={productList.length} paginate={paginate} />
 
 </>
 

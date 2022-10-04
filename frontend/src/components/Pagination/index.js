@@ -22,13 +22,13 @@ const Pagination = ({postsPerPage ,totalProduct , paginate}) => {
  
     return (
     <div >
-    <div>Pagination</div>
+   
     <div className='pagenation'>
   {pageNumbers.map((number)=>{
 return (
 
  
-  <p className='count' onClick={()=>paginate(number)} href='#'>{number}</p>
+  <p className='count' onClick={()=>paginate(number)} >{number}</p>
   
 
 
