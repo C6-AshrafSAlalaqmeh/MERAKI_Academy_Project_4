@@ -1,12 +1,19 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Pagination from "../Pagination";
+import ProductInList from "../ProductInList";
 import './style.css'
 
 
-const List = ({ storedName,token , setListIdOriginal,setShoeHome,setTitleList }) => {
+const List = ({ productList,storedName,token , setListIdOriginal,setShoeHome,setTitleList }) => {
   setShoeHome(false)
   const [lists, setList] = useState([]);
+  
+  
+
+
+
   const navigate = useNavigate();
 
   const getlist = () => {
@@ -26,9 +33,19 @@ const List = ({ storedName,token , setListIdOriginal,setShoeHome,setTitleList })
         console.log(err);
       });
   };
+
+
+ 
+
   useEffect(() => {
     getlist();
+   
   }, []);
+
+
+
+    
+
 
   return (
     <div className="backgroundlist">
@@ -51,6 +68,24 @@ const List = ({ storedName,token , setListIdOriginal,setShoeHome,setTitleList })
     {/* <div className='nameUser'>
       <h1> Welcome : {`${storedName}`}</h1>
       </div> */}
+  
+  
+  <ProductInList />
+  {/* <Pagination postsPerPage={postsPerPage} totalProductitem={currentPosts} paginate={paginate}/> */}
+  {/* {productList.length &&
+    productList.map((elem)=>{
+      return (
+        <>
+         <img className="pimg" src={`${elem.img}`} />
+        
+        
+        
+        </>
+      )
+    })} */}
+  
+  
+  
     </div>
   );
 };

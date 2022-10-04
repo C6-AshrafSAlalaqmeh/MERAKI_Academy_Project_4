@@ -3,28 +3,28 @@ import Login from '../Login'
 import './style.css'
 
 
-const Pagination = ({postsPerPage ,totalProductitem , paginate}) => {
+const Pagination = ({postsPerPage ,totalProduct , paginate}) => {
  const pageNumbers = []
-const [pageNumber, setPageNumber] = useState([])
+ //const [pageNumber, setPageNumber] = useState([])
 
 
-  useEffect(()=>{
-   console.log(totalProductitem);
+ //  useEffect(()=>{/
+   //console.log(totalProduct)
     
-    for(let i= 1; i<= Math.floor(totalProductitem / postsPerPage); i++){
+    for(let i= 1; i<= Math.floor(totalProduct / postsPerPage); i++){
       
         pageNumbers.push(i)
-        console.log(i)
+        //console.log(i)
      }
-     setPageNumber(pageNumbers)
-  }, [])
-console.log(pageNumber)
+     // setPageNumber(pageNumbers)
+  // }, [])
+//  console.log(pageNumber)
  
     return (
     <div >
     <div>Pagination</div>
     <div className='pagenation'>
-  {pageNumber.map((number)=>{
+  {pageNumbers.map((number)=>{
 return (
 
  

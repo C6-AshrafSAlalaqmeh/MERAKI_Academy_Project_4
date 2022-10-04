@@ -1,0 +1,30 @@
+.productsList{
+    display: grid;
+    grid-template-columns: repeat(5 , 170px);
+    gap: 50px;
+    margin-top: 0px;
+    row-gap: 50px;
+    height: 330px;
+}
+.itemProductList{
+    border: 2px solid;
+    width: 160px;
+    display: grid;
+    height: 190px;
+    border-style: outset;
+    background-color: rgba(90, 52, 52, 0.4);
+    justify-items: left;
+  margin-left: 140px;
+}
+.pimglsist{
+    width: 160px;
+    height: 130px;
+
+}
+.imgProductlist{
+    height: 120px;
+}
+.ptitlist{
+    color: yellow;
+    height: 0px;
+}

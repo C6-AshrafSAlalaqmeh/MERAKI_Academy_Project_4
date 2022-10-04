@@ -5,6 +5,7 @@
     /* margin-top: 50px; */
     gap: 50px;
     padding-top: 50px;
+    height: 200px;
 }
 
 .itemList{
@@ -42,10 +43,10 @@
 
 .backgroundlist{
     background-image: url('https://static2.bigstockphoto.com/0/4/3/large1500/340593394.jpg');
-    height: 690px;
+    height: 1200px;
     padding-top: 20px;
     display: grid;
-   
+    background-size: cover;   
 
    
 }

@@ -28,9 +28,7 @@ const Products = ({
   const [updateTitle, setUpdateTitle] = useState("");
   const [avarage, setAvarage] = useState("");
   const [desc, setDesc] = useState("");
-  const [currentPage, setCurrentPage] = useState(1)
-  const [postsPerPage] = useState(5)
-
+  
  
 
   
@@ -100,13 +98,7 @@ const Products = ({
     });
   };
 
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  let currentPosts = ProductItem.slice(indexOfFirstPost, indexOfLastPost)
-  const paginate = (pageNumber)=>{
-    setCurrentPage(pageNumber)
-  }
-  
+
 
 
 
@@ -145,6 +137,7 @@ const [productlength, setProductlength] = useState([])
 const count= []
 
 
+
   return (
     <>
     <div className="backgroundproduct">
@@ -162,9 +155,9 @@ const count= []
             };
             // console.log(elem)
             if (listidOriginal === elem.listId) {
-             count.push(elem)
-              
-               console.log(currentPosts);
+            //  count.push(elem)
+            //   console.log(count.length);
+            //    console.log(elem);
              
               // setProductlength(ProductItem.length)
               return (
@@ -244,7 +237,7 @@ const count= []
                     <button
                       className="favorite"
                       onClick={() => {
-                        buttonAddFavorite(elem._id);
+                        buttonAddFavorite(count._id);
                       }} 
                     >
                       Add Favorite{" "}
@@ -256,7 +249,7 @@ const count= []
             }
           })}
       </div>
-    <Pagination postsPerPage={postsPerPage} totalProductitem={currentPosts.length} paginate={paginate}/>
+    
     </div>
     </div>
     </>

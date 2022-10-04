@@ -14,6 +14,7 @@ import Favorite from "./components/Favorite";
 import Admin from "./components/Admin";
 import NavbarAdmin from "./components/NavbarAdmin";
 import NavbarGeneral from "./components/NabarGeneral";
+import ProductInList from "./components/ProductInList";
 
 function App() {
   const [ShowHome, setShoeHome] = useState(true);
@@ -37,8 +38,7 @@ function App() {
   const [showNavbargeneral, setshowNavbargeneral] = useState(true);
   const [hidenavbaradmin, setHidenavbaradmin] = useState(false);
   const [hideNavbarUser, setHideNavbarUser] = useState(false);
- 
-
+  
 
   return (
     <div className="App">
@@ -79,14 +79,23 @@ function App() {
       )}
       {ShowHome && <Home />}
       {/* {showName && <NameUser storedName={storedName}/>}   */}
-     
+
       <Routes>
+        {/* <Route
+          path="/productinlist"
+          element={
+            <ProductInList
+              productList={productList}
+              setProductList={setProductList}   />
+          }
+        /> */}
         <Route
           path="/admin"
           element={<Admin setHidenavbaradmin={setHidenavbaradmin} />}
         />
-       
+
         <Route path="/home" element={<Home />} />
+
         <Route
           path="/login"
           element={
@@ -131,6 +140,7 @@ function App() {
               token={token}
               setListIdOriginal={setListIdOriginal}
               storedName={storedName}
+              // productList={productList}
             />
           }
         />
@@ -151,8 +161,6 @@ function App() {
               listidOriginal={listidOriginal}
               setShowCreateProduct={setShowCreateProduct}
               showcreateProduct={showcreateProduct}
-           
-              
             />
           }
         />
