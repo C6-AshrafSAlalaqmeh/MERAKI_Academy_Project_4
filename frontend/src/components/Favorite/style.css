@@ -1,3 +1,7 @@
+.backgroundfavorite{
+    background-image: url('https://static2.bigstockphoto.com/0/4/3/large1500/340593394.jpg');
+    height: 900px;
+}
 .contanirfavorite{
     display: grid;
     grid-template-columns: repeat(2 , 650px);
@@ -13,7 +17,7 @@
     height: 190px;
     margin-top: 40px;
     border-style: outset;
-
+  background-color: rgba(61, 44, 29, 0.5);
 }
 .imgFavorite{
     width: 180px;
@@ -27,10 +31,14 @@
 }
 .buttondeleteFavorite{
    width: 100px;
-  
+   border-radius: 7px;
+   
+   background-color: rgb(250, 245, 242);
+border: 0px;
 }
 .pfavorite{
     margin-right: 690px;
     width: 380px;
     text-align: left;
+    color: aqua;
 }

@@ -29,7 +29,7 @@
     display: flex;
     height: 190px;
     border-style: outset;
-    background-color: rgba(90, 52, 52, 0.4);
+    background-color: rgba(90, 52, 52, 0.6);
 
 }
 .imgProduct{
@@ -92,7 +92,9 @@ height: 28px;
 .favorite{
     width: 100px;
     height: 50px;
-    margin-left: 298px;
+    margin-left: 299px;
+    border-radius: 7px;
+    border: 0px;
     
 }
 .inputUpdate{

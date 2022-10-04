@@ -237,7 +237,7 @@ const count= []
                     <button
                       className="favorite"
                       onClick={() => {
-                        buttonAddFavorite(count._id);
+                        buttonAddFavorite(elem._id);
                       }} 
                     >
                       Add Favorite{" "}

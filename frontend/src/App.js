@@ -140,7 +140,8 @@ function App() {
               token={token}
               setListIdOriginal={setListIdOriginal}
               storedName={storedName}
-              // productList={productList}
+              UserId={UserId}
+              admin={admin}
             />
           }
         />
@@ -194,6 +195,9 @@ function App() {
               UserId={UserId}
               token={token}
               favorite={favorite}
+              setTitleProduct={setTitleProduct}
+              setShowCreateProduct={setShowCreateProduct}
+              setProductDetalis={setProductDetalis}
             />
           }
         />

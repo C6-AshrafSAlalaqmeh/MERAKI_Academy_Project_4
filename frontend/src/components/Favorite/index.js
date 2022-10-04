@@ -2,11 +2,14 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './style.css'
 import ReactStars from 'react-rating-stars-component';
+import { useNavigate } from 'react-router-dom';
 
 
-const Favorite = ({idFavorite,UserId,token,favorite}) => {
+const Favorite = ({setProductDetalis,setShowCreateProduct,setTitleProduct,idFavorite,UserId,token,favorite}) => {
  const [favoriteItem, setFavoriteItem] = useState([])
 console.log(UserId);
+
+const navigate = useNavigate()
 
 const getFavorite =()=>{
 
@@ -21,11 +24,6 @@ const getFavorite =()=>{
     setFavoriteItem(result.data.result)
     console.log(result.data.result)
    
-  //  const item = favoriteItem.find((elem)=>{
-    // console.log(elem.Userid);
-    // console.log(elem.Userid);
-    // return elem.Userid == UserId
-  //})
    
   })
   .catch((err)=>{
@@ -64,9 +62,11 @@ const getFavorite =()=>{
 
 
   return (
+    <div className='backgroundfavorite'>
     <div className='contanirfavorite'>
   {favoriteItem.length && favoriteItem.map((elem)=>{
-     const stars = {
+    console.log(elem)
+    const stars = {
       size: 25,
       value: elem.itemid.avarage,
       edit: false
@@ -77,7 +77,21 @@ const getFavorite =()=>{
       <img className='imgFavorite' src={`${elem.itemid.img}`}/>
       </div>
       <div className='titAndAvarageAnddesc' >
-      <p className="ptit"> {elem.itemid.nameFood}</p>
+      <p className="ptit"
+        onClick={() => {
+  
+   setTitleProduct(elem.itemid.nameFood);
+    setShowCreateProduct(false);
+    setProductDetalis(elem.itemid);
+    navigate("/detalis");
+    }}
+      > {elem.itemid.nameFood}</p>
+   
+   
+   
+   
+   
+   
       {/* <p className="pava"> {elem.itemid.avarage}</p> */}
        <ReactStars {...stars} />
       <p className="pfavorite"> {elem.itemid.short_desc}</p>
@@ -92,6 +106,7 @@ const getFavorite =()=>{
     )
   })}
 
+    </div>
     </div>
   )
 }
