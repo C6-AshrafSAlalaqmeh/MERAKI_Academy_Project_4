@@ -58,6 +58,7 @@ function App() {
           setToken={setToken}
           setShowName={setShowName}
           setProducts={setProducts}
+          storedName={storedName}
         />
       )}
       {hideNavbarUser && (
@@ -73,6 +74,7 @@ function App() {
           setProducts={setProducts}
           showcreateProduct={showcreateProduct}
           setShowCreateProduct={setShowCreateProduct}
+          storedName={storedName}
         />
       )}
       {ShowHome && <Home />}

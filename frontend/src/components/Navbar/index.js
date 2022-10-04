@@ -17,6 +17,7 @@ const Navbar = ({
   showcreateProduct,
   setShowCreateProduct,
   setProducts,
+  storedName
 }) => {
   const [inputSearch, setInputSearch] = useState("");
 
@@ -52,11 +53,15 @@ const Navbar = ({
   return (
     <>
       <div className="containNav">
+        <div>
+      <div className='nameUser'>
+      <h1 className="storedname"><span className="welcome"> Welcome : </span>{`${storedName}`}</h1>
+      </div>
         <div className="divnavGood">
           <h2 className="navGood">
             Good <span className="food">Food</span>
           </h2>
-         
+        </div>
         </div>
         <div className="allLink">
           {!showNavbar ? (

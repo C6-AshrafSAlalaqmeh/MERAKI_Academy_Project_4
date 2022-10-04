@@ -1,7 +1,14 @@
 
 .buttonInAdmin{
-    background-color: rgb(183, 226, 215 , 0.0);
+    background-color: rgba(16, 25, 75, 0);
     border: 0px ;
     font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
 } 
+.storedname{
+    width: 229px;
+    color: rgb(12, 28, 82);
+}
+ /* .welcome{ 
+ color: black;
+} */

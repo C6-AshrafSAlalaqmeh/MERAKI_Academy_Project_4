@@ -17,9 +17,9 @@
 }
 .tit{
     width: 300px;
-    color: white;
+    color: rgb(229, 255, 0);
     font-family:Georgia, 'Times New Roman', Times, serif;
-    
+    margin-left: 30px;
 }
 
 .itemProduct{
@@ -55,7 +55,7 @@
     width: 350px;
     text-align: left;
     /* color: rgb(97, 97, 18); */
-    color: #d6f353;
+    color: rgb(229, 255, 0);
     font-size: 25px;
     height: 8px;
 }

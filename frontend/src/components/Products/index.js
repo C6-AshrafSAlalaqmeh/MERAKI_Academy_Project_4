@@ -29,7 +29,7 @@ const Products = ({
   const [avarage, setAvarage] = useState("");
   const [desc, setDesc] = useState("");
   const [currentPage, setCurrentPage] = useState(1)
-  const [postsPerPage] = useState(7)
+  const [postsPerPage] = useState(5)
 
  
 
@@ -44,6 +44,7 @@ const Products = ({
       .get("http://localhost:5000/product")
       .then((result) => {
         setProducts(result.data.product);
+        
       })
       .catch((err) => {
         console.log(err);
@@ -57,7 +58,7 @@ const Products = ({
   }, []);
 
   const buttonUpdate = (id) => {
-   console.log("aaa");
+  
     axios
       .put(`http://localhost:5000/product/${id}`, {
         nameFood: updateTitle,
@@ -65,7 +66,7 @@ const Products = ({
         short_desc: desc,
       })
       .then((result) => {
-       console.log("rrrr");
+      
         const newProduct = ProductItem.map((elem)=>{
           if(elem._id === id){
             console.log(result.data.nameFood)
@@ -101,7 +102,7 @@ const Products = ({
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = ProductItem.slice(indexOfFirstPost, indexOfLastPost)
+  let currentPosts = ProductItem.slice(indexOfFirstPost, indexOfLastPost)
   const paginate = (pageNumber)=>{
     setCurrentPage(pageNumber)
   }
@@ -141,7 +142,7 @@ const Products = ({
 const [productlength, setProductlength] = useState([])
 
 
-const count=[]
+const count= []
 
 
   return (
@@ -152,17 +153,18 @@ const count=[]
         <h1 className="tit">{`${titleList}`}</h1>
       </div>
       <div className="products">
-        {currentPosts.length &&
-          currentPosts.map((elem) => {
+        {ProductItem.length &&
+          ProductItem.map((elem) => {
             const stars = {
               size: 25,
               value: elem.avarage,
               edit: false
             };
-            
+            // console.log(elem)
             if (listidOriginal === elem.listId) {
-             
-              count.push(elem)
+             count.push(elem)
+              
+               console.log(currentPosts);
              
               // setProductlength(ProductItem.length)
               return (
@@ -254,7 +256,7 @@ const count=[]
             }
           })}
       </div>
-    <Pagination postsPerPage={postsPerPage} totalProductitem={ProductItem.length} paginate={paginate}/>
+    <Pagination postsPerPage={postsPerPage} totalProductitem={currentPosts.length} paginate={paginate}/>
     </div>
     </div>
     </>

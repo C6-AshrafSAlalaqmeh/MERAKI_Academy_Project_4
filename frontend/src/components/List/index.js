@@ -48,9 +48,9 @@ const List = ({ storedName,token , setListIdOriginal,setShoeHome,setTitleList })
           );
         })}
     </div>
-    <div className='nameUser'>
+    {/* <div className='nameUser'>
       <h1> Welcome : {`${storedName}`}</h1>
-      </div>
+      </div> */}
     </div>
   );
 };

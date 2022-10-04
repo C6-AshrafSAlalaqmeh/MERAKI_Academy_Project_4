@@ -14,6 +14,7 @@ const NavbarAdmin = ({
   showcreateProduct,
   setToken,
   setProducts,
+  storedName
 }) => {
   const [inputSearch, setInputSearch] = useState("");
 
@@ -46,11 +47,17 @@ navigate('/home')
   return (
     <>
       <div className="containNav">
+        <div>
+      <div className='nameUser'>
+      <h1 className="storedname"><span className="welcome"> Welcome : </span>{`${storedName}`}</h1>
+      </div>
         <div className="divnavGood">
           <h2 className="navGood">
             Welcome <span>Admin</span>
           </h2>
         </div>
+        </div>
+
         <div className="allLink">
           <div className="logoutAndHomeAndCreat">
             <Link className="home" to="/list">
