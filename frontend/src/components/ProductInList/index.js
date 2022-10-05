@@ -40,13 +40,13 @@ const ProductInList = () => {
      
   return (
     <>
-       {/* <div>ProductInList</div> */}
+      
      
       
       <div className="productsList">
         {currentPosts.length &&
           currentPosts.map((elem) => {
-           console.log(elem.listId.typeFood);
+          
             const stars = {
               size: 25,
               value: elem.avarage,

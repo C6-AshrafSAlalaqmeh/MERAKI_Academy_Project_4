@@ -33,7 +33,7 @@
     grid-template-columns: repeat(2,50px);
     row-gap: 0px;
     column-gap: 120px;
-    height: 290px;
+    height: 294px;
     border-style: outset;
     background-color: rgba(90, 52, 52, 0.6);
 
@@ -80,6 +80,7 @@ height: 28px;
 .titAndAvarageAnddesc{
     width: 300px;
     margin-left: 20px;
+    height: 15px;
     
   
 }
@@ -88,24 +89,31 @@ height: 28px;
     display: flex;
     gap: 10px;
     width: 170px;
-    /* margin-left: 31px; */
+    /* margin-right: 100px; */
     align-items: end;
+    justify-content: left;
+    
 }
 .update{
     width: 70px;
-    height: 50px;
+    height: 30px;
+    margin-top: 65px;
+    /* margin-right: 100px; */
+    margin-left: 90px;
 }
 .delete{
     width: 80px;
-    height: 50px;
+    height: 30px;
+    /* margin-left: 90px; */
 }
 
 .inputUpdate{
     display: grid;
     height: 100px;
     gap: 10px;
-    margin-top: 0px;
-    margin-left: 34px;
+  width: 50px;
+    
+    margin-left: 10px;
     
 }
 .backgroundproduct{

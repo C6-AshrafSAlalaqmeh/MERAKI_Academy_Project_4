@@ -31,7 +31,7 @@ const Navbar = ({
     axios
       .get(`http://localhost:5000/product/search?name=${inputSearch}`)
       .then((result) => {
-        console.log(result.data.Product);
+         console.log(result.data.Product);
         setProducts(result.data.Product);
       })
       .catch((err) => {
@@ -95,7 +95,7 @@ const Navbar = ({
                 placeholder="Search Name Food"
                 aria-label="Search"
                 onChange={(e) => {
-                  setInputSearch(e.target.value);
+                  setInputSearch(e.target.value);console.log(e.target.value);
                 }}
               ></input>
               <button className="buttonsearch" onClick={buttonSearch}>Search</button>

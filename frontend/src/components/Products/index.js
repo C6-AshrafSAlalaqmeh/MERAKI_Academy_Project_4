@@ -138,7 +138,7 @@ const [productlength, setProductlength] = useState([])
 
 const count= []
 
-
+// console.log(ProductItem);
 
   return (
     <>
@@ -150,6 +150,7 @@ const count= []
       <div className="products">
         {ProductItem.length &&
           ProductItem.map((elem) => {
+            console.log(elem);
             const stars = {
               size: 25,
               value: elem.avarage,
@@ -158,8 +159,8 @@ const count= []
             // console.log(elem.listId._id);
             // console.log(listidOriginal);
             // console.log(elem.listId.typeFood);
-            if (listidOriginal === elem.listId._id) {
-             
+            if (listidOriginal === elem.listId._id || listidOriginal === elem.listId) {
+              console.log(elem);
               return (
                 <div className="itemProduct">
                   <div className="imgProduct">
@@ -177,9 +178,69 @@ const count= []
                     >
                       {elem.nameFood}
                     </p>
+
+                    {UserId === admin && (
+                 
+                 <>
+                 <div className="inputUpdate">
+                   <input
+                     placeholder="Title"
+                     onChange={(e) => {
+                       setUpdateTitle(e.target.value);
+                     }}
+                   />
+                   <input
+                     placeholder="avarege" type='number'
+                     onChange={(e) => {
+                       setAvarage(e.target.value);
+                     }}
+                   />
+                   <input
+                     placeholder="Description"
+                     onChange={(e) => {
+                       setDesc(e.target.value);
+                     }}
+                   />
+                 </div>
+                
+                 <div className="buttonUpdateAndDelete">
+                   <button
+                     className="update"
+                     onClick={() => buttonUpdate(elem._id)}
+                   >
+                     {" "}
+                     Update{" "}
+                   </button>
+                   <button
+                     className="delete"
+                     onClick={() => {
+                       buttonDelete(elem._id);
+                     }}
+                   >
+                     {" "}
+                     Delete
+                   </button>
+                 </div>
+           
+                 </>
+               )}
+
+
+
+
+
+
+
+
+
+
+
+
+                    {UserId !== admin && (
                     <p className="pava"> 
                      <ReactStars {...stars} />
                      </p> 
+                    )}
                      </div>   
                     {/* <p className="pava">{elem.avarage}</p> */}
                    <div>
@@ -188,7 +249,7 @@ const count= []
 
 
 
-                   {UserId === admin && (
+                   {/* {UserId === admin && (
                  
                   <>
                   <div className="inputUpdate">
@@ -232,7 +293,7 @@ const count= []
                   </div>
             
                   </>
-                )}
+                )} */}
                 {/* {UserId !== admin && (
                   
                   <div>
