@@ -81,6 +81,12 @@ margin-right: 300px;
     background-color: green;
     color: white;
     margin-right: 100px;
+    cursor: pointer;
+}
+.favorite:hover{
+    background-color: #CEFF1A;
+  
+    transition:  background-color .5s ;
 }
 .avarageDetalis{
     text-align: center;

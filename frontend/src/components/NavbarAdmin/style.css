@@ -4,17 +4,24 @@
     border: 0px ;
     font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
+    color: white;
 } 
 .storednameadmin{
     margin-top: 10px;
     width: 229px;
-    color: rgb(12, 28, 82);
+    color: #CEFF1A;
     height: 20px;
     padding: 10px;
 }
- /* .welcome{ 
- color: black;
-} */
+ .welcome{ 
+ color: #CEFF1A;
+}
 .navGoodAdmin{
 margin-top:30px;
+}
+.home{
+    color: white;
+}
+.addPro{
+    color: white;
 }
