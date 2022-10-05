@@ -4,14 +4,17 @@
     
 }
 .contanirProduct{
-    display: grid;
-    grid-template-columns: repeat(1 , 450px);
-    background-image:url('https://static2.bigstockphoto.com/0/4/3/large1500/340593394.jpg');
+    /* display: grid;
+    grid-template-columns: repeat(1 , 450px); */
+    /* background-image:url('https://static2.bigstockphoto.com/0/4/3/large1500/340593394.jpg'); */
+    
     gap: 10px;
-    background-size: cover;
+    /* background-size: cover; */
 }   
 .titleProduct{
     margin-left: 500px;
+    height: 0px;
+    
    
     
 }
@@ -25,9 +28,12 @@
 .itemProduct{
     /* margin-right: 500px; */
     border: 2px solid;
-    width: 900px;
-    display: flex;
-    height: 190px;
+    width: 410px;
+    display: grid;
+    grid-template-columns: repeat(2,50px);
+    row-gap: 0px;
+    column-gap: 120px;
+    height: 290px;
     border-style: outset;
     background-color: rgba(90, 52, 52, 0.6);
 
@@ -35,42 +41,46 @@
 .imgProduct{
     width: 180px;
     /* border: 1px solid; */
-    /* border-radius: 10px; */
+    border-radius: 10px;
 }
 .pimg{
     width: 180px;
     height: 189px;
-    /* border-radius: 10px; */
+    border-radius: 10px;
 }
 
 .products{
     display: grid;
-    gap: 20px;
+    margin-top: 50px;
+    gap: 10px;
+    grid-template-columns: repeat(3 , 450px);
     
    
 }
 .ptit{
     margin-right: 690px;
     cursor: pointer;
-    width: 350px;
+    width: 230px;
     text-align: left;
     /* color: rgb(97, 97, 18); */
     color: rgb(229, 255, 0);
     font-size: 25px;
-    height: 8px;
+    height: 50px;
 }
 .pava{
 height: 28px;
 }
 .p{
-    margin-right: 690px;
+    /* margin-right: 690px; */
+    margin-left: 50px;
     width: 320px;
-    text-align: left;
+    text-align: center;
     color: rgb(255, 255, 255);
 }
 .titAndAvarageAnddesc{
     width: 300px;
     margin-left: 20px;
+    
   
 }
 .buttonUpdateAndDelete{
@@ -92,7 +102,7 @@ height: 28px;
 .favorite{
     width: 100px;
     height: 50px;
-    margin-left: 299px;
+    margin-left: 0px;
     border-radius: 7px;
     border: 0px;
     

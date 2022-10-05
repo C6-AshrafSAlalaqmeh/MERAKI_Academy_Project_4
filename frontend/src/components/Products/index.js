@@ -153,13 +153,9 @@ const count= []
               value: elem.avarage,
               edit: false
             };
-            // console.log(elem)
+            
             if (listidOriginal === elem.listId) {
-            //  count.push(elem)
-            //   console.log(count.length);
-            //    console.log(elem);
-             
-              // setProductlength(ProductItem.length)
+           
               return (
                 <div className="itemProduct">
                   <div className="imgProduct">
@@ -179,10 +175,12 @@ const count= []
                     </p>
                     <p className="pava"> 
                      <ReactStars {...stars} />
-                     </p>    
+                     </p> 
+                     </div>   
                     {/* <p className="pava">{elem.avarage}</p> */}
+                   <div>
                     <p className="p"> {elem.short_desc}</p>
-                  </div>
+                    </div>
 
 
 
@@ -231,7 +229,7 @@ const count= []
             
                   </>
                 )}
-                {UserId !== admin && (
+                {/* {UserId !== admin && (
                   
                   <div>
                     <button
@@ -243,7 +241,7 @@ const count= []
                       Add Favorite{" "}
                     </button>
                   </div>
-                )}
+                )} */}
                 </div>
               );
             }
