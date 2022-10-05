@@ -49,10 +49,10 @@ navigate('/home')
       <div className="containNav">
         <div>
       <div className='nameUser'>
-      <h1 className="storedname"><span className="welcome"> Welcome : </span>{`${storedName}`}</h1>
+      <h1 className="storednameadmin"><span className="welcome"> Welcome : </span>{`${storedName}`}</h1>
       </div>
         <div className="divnavGood">
-          <h2 className="navGood">
+          <h2 className="navGoodAdmin">
             Welcome <span>Admin</span>
           </h2>
         </div>
@@ -82,7 +82,7 @@ navigate('/home')
                   setInputSearch(e.target.value);
                 }}
               ></input>
-              <button  onClick={buttonSearch}>Search</button>
+              <button  className="buttonsearch" onClick={buttonSearch}>Search</button>
             </div>
           )}
         </div>

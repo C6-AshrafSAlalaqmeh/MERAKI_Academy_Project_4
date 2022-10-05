@@ -1,8 +1,8 @@
 .backgroundDetalis{
-    background-color: blue;
+    /* background-color: rgb(157, 187, 157 ,0.5); */
     margin-top: 0px;
-    background-image: url('https://static2.bigstockphoto.com/0/4/3/large1500/340593394.jpg');
-    height: 900px;
+    /* background-image: url('https://static2.bigstockphoto.com/0/4/3/large1500/340593394.jpg'); */
+    /* height: 900px; */
 }
 .tiltleDetalis{
     margin-top: 0px;
@@ -12,7 +12,8 @@
     display: grid;
     grid-template-columns: repeat(2 , 450px);
     justify-content: center;
-    margin-left: 90px;
+    margin-left: 110px;
+    
    
    
     
@@ -25,22 +26,28 @@
     grid-template-columns: repeat(2 , 250px);
     height: 650px;
     margin-top: 10px;
-    background-color: rgb(133, 16, 16 , 0.5);
-
+    background-color: rgb(68, 83, 79,0.7);
+    /* background-color: rgb(168, 67, 67,0.9); */
+    height: auto;
 }
 .titledetalis{
     color: yellow;
     font-size: 25px;
     height: 10px;
-    /* margin-left: 100px; */
+    margin-left: 80px;
     width: 300px;
-    
-    
-    
 }
+.tiltleDetaliss{
+    color: green;
+   margin-left: 500px;
+    /* height: 10px; */
+    
+    width: 300px;
+}
+
 .titleAndbuttondetail{
     display: flex;
-    column-gap: 70px;
+    column-gap: 0px;
     
     justify-content: left;
     
@@ -52,14 +59,15 @@ margin-right: 300px;
     height: 15px;
 }
 .imgDetalis{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 250px;
+
     
 }
 .divimgDetalis{
     border: 1px solid;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 250px;
 }
 .titAnaavaDetalis{
     width: 300px;
@@ -70,11 +78,13 @@ margin-right: 300px;
     height: 50px;
     border-radius: 7px;
     border: 0px;
-    
-    
+    background-color: green;
+    color: white;
+    margin-right: 100px;
 }
 .avarageDetalis{
     text-align: center;
+    margin-left: 80px;
 }
 .stepsAndMethod{
     display: flex;
@@ -83,7 +93,7 @@ margin-right: 300px;
 }
 .prepAndCook{
     margin-top: 40px;
-    margin-right: 200px;
+    margin-left: 80px;
     width: 200px;
 }
 .Ingredients{
@@ -123,7 +133,7 @@ margin-right: 300px;
     width: 200px;
     height: 30px;
     position: relative;
-    background: rgb(133, 16, 16 , 0.7);
+    background: rgb(133, 16, 16 , 0.5);
     align-content: start;
     padding-top: 10px;
     color: yellow;
@@ -149,7 +159,7 @@ margin-right: 300px;
     width: 0;
     height: 0;
     
-    border-left: 20px solid rgb(133, 16, 16 , 0.5);
+    border-left: 20px solid rgb(133, 16, 16 , 0.3);
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
   }
@@ -163,7 +173,7 @@ margin-right: 300px;
     width: 200px;
     height: 30px;
     position: relative;
-    background: rgb(133, 16, 16 , 0.7);
+    background: rgb(133, 16, 16 , 0.5);
     align-content: start;
     padding-top: 10px;
     /* padding-left: 100px; */
@@ -190,7 +200,7 @@ margin-right: 300px;
     bottom: 0;
     width: 0;
     height: 0;
-    border-left: 20px solid rgb(133, 16, 16 , 0.5);
+    border-left: 20px solid rgb(133, 16, 16 , 0.3);
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
   }

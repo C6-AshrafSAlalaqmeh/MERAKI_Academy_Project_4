@@ -20,7 +20,7 @@
 }
 .tit{
     width: 310px;
-    color: rgb(229, 255, 0);
+    color: green;
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin-left: 30px;
 }
@@ -35,7 +35,8 @@
     column-gap: 120px;
     height: 294px;
     border-style: outset;
-    background-color: rgba(90, 52, 52, 0.6);
+    /* background-color: rgba(90, 52, 52, 0.6); */
+    background-color: rgba(90, 52, 52, 0.4);
 
 }
 .imgProduct{
@@ -44,8 +45,8 @@
     border-radius: 10px;
 }
 .pimg{
-    width: 180px;
-    height: 189px;
+    width: 185px;
+    height: 195px;
     border-radius: 10px;
 }
 
@@ -53,7 +54,8 @@
     display: grid;
     margin-top: 50px;
     gap: 10px;
-    grid-template-columns: repeat(3 , 450px);
+    grid-template-columns: repeat(3 , 420px);
+    justify-content: center;
     
    
 }
@@ -63,7 +65,7 @@
     width: 230px;
     text-align: left;
     /* color: rgb(97, 97, 18); */
-    color: rgb(229, 255, 0);
+    color: green;
     font-size: 25px;
     height: 50px;
 }
@@ -75,7 +77,7 @@ height: 28px;
     margin-left: 50px;
     width: 320px;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: green;
 }
 .titAndAvarageAnddesc{
     width: 300px;
@@ -85,26 +87,27 @@ height: 28px;
   
 }
 .buttonUpdateAndDelete{
-    /* margin-top: 50PX; */
     display: flex;
     gap: 10px;
     width: 170px;
-    /* margin-right: 100px; */
     align-items: end;
     justify-content: left;
+    
     
 }
 .update{
     width: 70px;
     height: 30px;
     margin-top: 65px;
-    /* margin-right: 100px; */
     margin-left: 90px;
+    border-radius: 7px;
+    border: 0px;
 }
 .delete{
     width: 80px;
     height: 30px;
-    /* margin-left: 90px; */
+    border-radius: 7px;
+    border: 0px;
 }
 
 .inputUpdate{

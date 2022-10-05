@@ -16,17 +16,21 @@
     display: grid;
     
     
+    
 }
 /* .titlist{
    
 } */
 .titleList{
     cursor: pointer;
-    color: yellow;
+    color: aqua;
     /* color: rgb(223, 219, 202); */
-    background-color: rgb(74, 74, 95 , 0.5);
+    /* background-color: rgb(74, 74, 95 , 0.5); */
+    background-color: #B1740F;
     height: 70px;
     align-content: start;
+    
+    
    
 }
 .titlist:hover{
@@ -43,7 +47,8 @@
 
 .backgroundlist{
     /* background-image: url('https://static2.bigstockphoto.com/0/4/3/large1500/340593394.jpg'); */
-   background-color: rgb(157, 187, 157 ,0.5);
+   /* background-color: rgb(157, 187, 157 ,0.5); */
+   
     height: 1200px;
     padding-top: 20px;
     display: grid;

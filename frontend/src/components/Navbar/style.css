@@ -1,5 +1,6 @@
 .containNav{
-    background-color: rgba(102, 80, 80, 0.8);
+    background-color: #B1740F;
+    /* background-color:rgb(4, 117, 4 , 0.9); */
     /* background-image: url('https://st2.depositphotos.com/1013886/10274/i/950/depositphotos_102745280-stock-photo-healthy-eating-background-studio-photo.jpg'); */
     display: flex;
     gap: 320px;
@@ -16,13 +17,20 @@
     position: relative;
     animation: mymove 5s infinite;
 }
+.storedname{
+    margin-top: 10px;
+    width: 229px;
+    color: #C2E812;
+    height: 20px;
+    padding: 10px;
+}
 .navGood{
     animation-timing-function: linear;
-    color: rgb(90, 14, 31);
+    color: rgb(253, 253, 253);
     font-size: 30px;
 }
 .food{
-    color: rgb(155, 12, 12,0.7);
+    color: rgba(226, 250, 7, 0.7);
 }
 
 .loginAndRedister{
@@ -41,10 +49,10 @@
 }
 .search{
     margin-left: 400px;
-    border-radius: 8px;
+    border-radius: 12px;
     height: 30px;
-    background-color: rgb(204, 161, 161);
-    color: aqua;
+    background-color: #BFCBC2;
+    color: FFFFFF;
     border: 0px;
     
 }
@@ -52,6 +60,9 @@
     height: 30px;
     border-radius: 7px;
     border: 1px solid;
+    margin-left: 5px;
+    background-color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     
 }
 .searchAndinput{
@@ -83,6 +94,7 @@
     border: 0px ;
     font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
+    color: #FFFFFF;
 }
 .logout:hover{
     transform:scale(1.08 ); 
@@ -92,7 +104,7 @@
 }
 .home{
     text-decoration: none ;
-    color: black;
+    color: #FFFFFF;
 }
 .home:hover{
     transform:scale(1.08 ); 
@@ -100,7 +112,7 @@
 }
 .fav{
     text-decoration: none ;
-    color: black;
+    color: #FFFFFF;
 }
 .fav:hover{
     transform:scale(1.08 ); 

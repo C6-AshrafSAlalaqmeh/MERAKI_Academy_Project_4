@@ -43,8 +43,8 @@ const Detalis = ({
 
   return (
     <div className="backgroundDetalis">
-      <div>
-        <h1 className="tiltleDetalis">{`${titleProduct}`}</h1>
+      <div className="big">
+        <h1 className="tiltleDetaliss">{`${titleProduct}`}</h1>
       </div>
       <div className="contanirDetalis">
         <div className="itemDetalis">
