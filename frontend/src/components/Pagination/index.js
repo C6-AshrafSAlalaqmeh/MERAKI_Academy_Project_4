@@ -11,7 +11,7 @@ const Pagination = ({postsPerPage ,totalProduct , paginate}) => {
  //  useEffect(()=>{/
    //console.log(totalProduct)
     
-    for(let i= 1; i<= Math.floor(totalProduct / postsPerPage); i++){
+    for(let i= 1; i<= Math.ceil(totalProduct / postsPerPage); i++){
       
         pageNumbers.push(i)
         //console.log(i)

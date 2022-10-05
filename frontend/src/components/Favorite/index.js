@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Favorite = ({setProductDetalis,setShowCreateProduct,setTitleProduct,idFavorite,UserId,token,favorite}) => {
  const [favoriteItem, setFavoriteItem] = useState([])
-console.log(UserId);
+// console.log(UserId);
 
 const navigate = useNavigate()
 
@@ -22,7 +22,7 @@ const getFavorite =()=>{
 
   .then((result)=>{
     setFavoriteItem(result.data.result)
-    console.log(result.data.result)
+    // console.log(result.data.result)
    
    
   })
@@ -64,7 +64,7 @@ const getFavorite =()=>{
   return (
     <div className='backgroundfavorite'>
     <div className='contanirfavorite'>
-  {favoriteItem.length && favoriteItem.map((elem)=>{
+  {favoriteItem && favoriteItem.map((elem)=>{
     console.log(elem)
     const stars = {
       size: 25,
