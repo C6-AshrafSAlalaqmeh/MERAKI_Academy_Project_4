@@ -77,7 +77,7 @@ const getFavorite =()=>{
       <img className='imgFavorite' src={`${elem.itemid.img}`}/>
       </div>
       <div className='titAndAvarageAnddesc' >
-      <p className="ptit"
+      <p className="ptitfavorite"
         onClick={() => {
   
    setTitleProduct(elem.itemid.nameFood);

@@ -21,6 +21,7 @@ const Products = ({
   setProducts,
   setidFavorite,
   
+  
  
 
 }) => {
@@ -42,6 +43,7 @@ const Products = ({
       .get("http://localhost:5000/product")
       .then((result) => {
         setProducts(result.data.product);
+        
         
       })
       .catch((err) => {
@@ -102,29 +104,29 @@ const Products = ({
 
 
 
-  const buttonAddFavorite = (ElemntId) => {
+  // const buttonAddFavorite = (ElemntId) => {
     
-    axios
-      .post(
-        "http://localhost:5000/favorite",
-        {
-          itemid: ElemntId, //elem._id
-          userid: UserId,
-        },
-        {
-          headers: {
-            authorization: "Bearer " + token,
-          },
-        }
-      )
-      .then((result) => {
-        console.log(result.data.userid);
-        setidFavorite(result.data.userid)
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  //   axios
+  //     .post(
+  //       "http://localhost:5000/favorite",
+  //       {
+  //         itemid: ElemntId, //elem._id
+  //         userid: UserId,
+  //       },
+  //       {
+  //         headers: {
+  //           authorization: "Bearer " + token,
+  //         },
+  //       }
+  //     )
+  //     .then((result) => {
+  //       console.log(result.data.userid);
+  //       setidFavorite(result.data.userid)
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
 
 
 
@@ -153,9 +155,11 @@ const count= []
               value: elem.avarage,
               edit: false
             };
-            
-            if (listidOriginal === elem.listId) {
-           
+            // console.log(elem.listId._id);
+            // console.log(listidOriginal);
+            // console.log(elem.listId.typeFood);
+            if (listidOriginal === elem.listId._id) {
+             
               return (
                 <div className="itemProduct">
                   <div className="imgProduct">

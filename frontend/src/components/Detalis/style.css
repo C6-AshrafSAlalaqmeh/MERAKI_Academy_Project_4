@@ -31,7 +31,22 @@
 .titledetalis{
     color: yellow;
     font-size: 25px;
-    height: 15px;
+    height: 10px;
+    /* margin-left: 100px; */
+    width: 300px;
+    
+    
+    
+}
+.titleAndbuttondetail{
+    display: flex;
+    column-gap: 70px;
+    
+    justify-content: left;
+    
+}
+.pfavorite{
+margin-right: 300px;
 }
 .avarageDetalis{
     height: 15px;
@@ -49,6 +64,14 @@
 .titAnaavaDetalis{
     width: 300px;
    text-align: left;
+}
+.favorite{
+    width: 100px;
+    height: 50px;
+    border-radius: 7px;
+    border: 0px;
+    
+    
 }
 .avarageDetalis{
     text-align: center;

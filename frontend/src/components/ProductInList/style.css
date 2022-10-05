@@ -10,7 +10,7 @@
     border: 2px solid;
     width: 180px;
     display: grid;
-    height: 210px;
+    height: 220px;
     border-style: outset;
     background-color: rgba(90, 52, 52, 0.4);
     justify-items: left;
@@ -26,5 +26,14 @@
 }
 .ptitlist{
     color: yellow;
-    height: 15px;
+    height: 20px;
+    text-align: left;
+}
+.ptypefood{
+    height: 0px;
+    text-align: left;
+    color: yellow;
+}
+.pava{
+ margin-left: 38px;
 }

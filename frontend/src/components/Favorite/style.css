@@ -42,3 +42,14 @@ border: 0px;
     text-align: left;
     color: aqua;
 }
+
+.ptitfavorite{
+    margin-right: 690px;
+    cursor: pointer;
+    width: 300px;
+    text-align: left;
+    /* color: rgb(97, 97, 18); */
+    color: rgb(229, 255, 0);
+    font-size: 25px;
+    height: 30px;
+}

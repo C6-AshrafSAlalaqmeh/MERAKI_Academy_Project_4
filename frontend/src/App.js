@@ -81,14 +81,13 @@ function App() {
       {/* {showName && <NameUser storedName={storedName}/>}   */}
 
       <Routes>
-        {/* <Route
+         {/* <Route
           path="/productinlist"
           element={
             <ProductInList
-              productList={productList}
-              setProductList={setProductList}   />
+            typeFood={typeFood} />
           }
-        /> */}
+        />  */}
         <Route
           path="/admin"
           element={<Admin setHidenavbaradmin={setHidenavbaradmin} />}
@@ -162,6 +161,7 @@ function App() {
               listidOriginal={listidOriginal}
               setShowCreateProduct={setShowCreateProduct}
               showcreateProduct={showcreateProduct}
+              
             />
           }
         />
@@ -172,6 +172,10 @@ function App() {
               titleProduct={titleProduct}
               setTitleProduct={setTitleProduct}
               productDetalis={productDetalis}
+              UserId={UserId}
+              token={token}
+              setidFavorite={setidFavorite}
+              admin={admin}
             />
           }
         />

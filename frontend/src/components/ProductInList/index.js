@@ -6,6 +6,7 @@ import './style.css'
 
 
 const ProductInList = () => {
+ 
     const [productList, setProductList] = useState([]);
     const [currentPage, setCurrentPage] = useState(1)
     const [postsPerPage] = useState(10)
@@ -15,7 +16,7 @@ const ProductInList = () => {
           .get("http://localhost:5000/product")
           .then((result) => {
             setProductList(result.data.product);
-            console.log(result.data.product);
+            // console.log(result.data.product);
           })
           .catch((err) => {
             console.log(err);
@@ -45,7 +46,7 @@ const ProductInList = () => {
       <div className="productsList">
         {currentPosts.length &&
           currentPosts.map((elem) => {
-           
+           console.log(elem.listId.typeFood);
             const stars = {
               size: 25,
               value: elem.avarage,
@@ -63,6 +64,9 @@ const ProductInList = () => {
                       className="ptitlist" >
                       {elem.nameFood}
                     </p>
+                  {/* {typeFood} */}
+                  
+                   <p className="ptypefood">{elem.listId.typeFood}</p>
                     <p className="pava"> 
                      <ReactStars {...stars} />
                      </p>    

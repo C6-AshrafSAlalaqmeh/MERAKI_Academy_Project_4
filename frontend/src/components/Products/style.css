@@ -13,13 +13,13 @@
 }   
 .titleProduct{
     margin-left: 500px;
-    height: 0px;
+    height: 10px;
     
    
     
 }
 .tit{
-    width: 300px;
+    width: 310px;
     color: rgb(229, 255, 0);
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin-left: 30px;
@@ -84,11 +84,11 @@ height: 28px;
   
 }
 .buttonUpdateAndDelete{
-    margin-top: 50PX;
+    /* margin-top: 50PX; */
     display: flex;
     gap: 10px;
     width: 170px;
-    margin-left: 31px;
+    /* margin-left: 31px; */
     align-items: end;
 }
 .update{
@@ -99,19 +99,12 @@ height: 28px;
     width: 80px;
     height: 50px;
 }
-.favorite{
-    width: 100px;
-    height: 50px;
-    margin-left: 0px;
-    border-radius: 7px;
-    border: 0px;
-    
-}
+
 .inputUpdate{
     display: grid;
     height: 100px;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: 0px;
     margin-left: 34px;
     
 }
