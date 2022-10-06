@@ -13,13 +13,13 @@
     to {left: 200px;}
 }
 .divnavGood{
-    width: 200px;
+    width: 190px;
     position: relative;
     animation: mymove 5s infinite;
 }
 .storedname{
     margin-top: 10px;
-    width: 229px;
+    width: 100px;
     color: #C2E812;
     height: 20px;
     padding: 10px;
@@ -54,6 +54,7 @@
     background-color: #BFCBC2;
     color: FFFFFF;
     border: 0px;
+   
     
 }
 .buttonsearch{
@@ -63,11 +64,14 @@
     margin-left: 5px;
     background-color: white;
     font-family:Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
     
 }
 .searchAndinput{
     align-content: start;
-    margin-left: 150px;
+    margin-left: 110px;
+    margin-top: 15px;
+
 }
 .login{
     text-decoration: none ;

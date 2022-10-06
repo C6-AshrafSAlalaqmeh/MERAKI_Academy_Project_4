@@ -16,7 +16,7 @@ const ProductInList = () => {
           .get("http://localhost:5000/product")
           .then((result) => {
             setProductList(result.data.product);
-            // console.log(result.data.product);
+            
           })
           .catch((err) => {
             console.log(err);

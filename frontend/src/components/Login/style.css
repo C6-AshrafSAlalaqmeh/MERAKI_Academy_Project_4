@@ -79,6 +79,7 @@ margin-left: 110px;
     /* transition: transform .5s ; */
     background-color: rgb(153, 79, 223);
     transition:  background-color .5s ;
+    color: white;
 }
 .message{
     color: aqua;

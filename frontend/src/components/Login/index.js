@@ -8,8 +8,6 @@ const Login = ({
   setshowNavbargeneral,
   setHidenavbaradmin,
   setshowAdmin,
-  UserId,
-  admin,
   setShowName,
   setUserId,
   setstoredName,

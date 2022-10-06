@@ -9,17 +9,14 @@ import ReactStars from 'react-rating-stars-component';
 const Products = ({
   setTitleProduct,
   UserId,
-  token,
   admin,
-  setFavorite,
   titleList,
   setProductDetalis,
-  productDetalis,
   listidOriginal,
   setShowCreateProduct,
   ProductItem,
   setProducts,
-  setidFavorite,
+  
   
   
  
@@ -104,41 +101,14 @@ const Products = ({
 
 
 
-  // const buttonAddFavorite = (ElemntId) => {
-    
-  //   axios
-  //     .post(
-  //       "http://localhost:5000/favorite",
-  //       {
-  //         itemid: ElemntId, //elem._id
-  //         userid: UserId,
-  //       },
-  //       {
-  //         headers: {
-  //           authorization: "Bearer " + token,
-  //         },
-  //       }
-  //     )
-  //     .then((result) => {
-  //       console.log(result.data.userid);
-  //       setidFavorite(result.data.userid)
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
-
-
-
-
 
 
 const [productlength, setProductlength] = useState([])
 
 
-const count= []
 
-// console.log(ProductItem);
+
+
 
   return (
     <>
@@ -156,9 +126,7 @@ const count= []
               value: elem.avarage,
               edit: false
             };
-            // console.log(elem.listId._id);
-            // console.log(listidOriginal);
-            // console.log(elem.listId.typeFood);
+           
             if (listidOriginal === elem.listId._id || listidOriginal === elem.listId) {
           
               return (
@@ -246,67 +214,6 @@ const count= []
                    <div>
                     <p className="p"> {elem.short_desc}</p>
                     </div>
-
-
-
-                   {/* {UserId === admin && (
-                 
-                  <>
-                  <div className="inputUpdate">
-                    <input
-                      placeholder="Title"
-                      onChange={(e) => {
-                        setUpdateTitle(e.target.value);
-                      }}
-                    />
-                    <input
-                      placeholder="avarege" type='number'
-                      onChange={(e) => {
-                        setAvarage(e.target.value);
-                      }}
-                    />
-                    <input
-                      placeholder="Description"
-                      onChange={(e) => {
-                        setDesc(e.target.value);
-                      }}
-                    />
-                  </div>
-                 
-                  <div className="buttonUpdateAndDelete">
-                    <button
-                      className="update"
-                      onClick={() => buttonUpdate(elem._id)}
-                    >
-                      {" "}
-                      Update{" "}
-                    </button>
-                    <button
-                      className="delete"
-                      onClick={() => {
-                        buttonDelete(elem._id);
-                      }}
-                    >
-                      {" "}
-                      Delete
-                    </button>
-                  </div>
-            
-                  </>
-                )} */}
-                {/* {UserId !== admin && (
-                  
-                  <div>
-                    <button
-                      className="favorite"
-                      onClick={() => {
-                        buttonAddFavorite(elem._id);
-                      }} 
-                    >
-                      Add Favorite{" "}
-                    </button>
-                  </div>
-                )} */}
                 </div>
               );
             }

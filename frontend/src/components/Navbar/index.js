@@ -9,7 +9,6 @@ const Navbar = ({
   setshowNavbargeneral,
   setHidenavbaradmin,
   setHideNavbarUser,
-  showAdmin,
   setshowNavbar,
   setToken,
   setShowName,

@@ -9,9 +9,7 @@ import List from "./components/List";
 import Products from "./components/Products";
 import Detalis from "./components/Detalis";
 import AddProduct from "./components/AddProduct";
-
 import Favorite from "./components/Favorite";
-
 import NavbarAdmin from "./components/NavbarAdmin";
 
 
@@ -42,12 +40,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* {showNavbargeneral && (
-        <NavbarGeneral
-          setHideNavbarUser={setHideNavbarUser}
-          setHidenavbaradmin={setHidenavbaradmin}
-        />
-      )} */}
+    
       {hidenavbaradmin && (
         <NavbarAdmin
           setshowNavbargeneral={setshowNavbargeneral}
@@ -196,6 +189,7 @@ function App() {
             />
           }
         />
+        <Route path="*" element={<p>Not Found</p>} />
       </Routes>
     </div>
   );

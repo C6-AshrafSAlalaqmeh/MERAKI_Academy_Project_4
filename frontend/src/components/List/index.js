@@ -6,8 +6,6 @@ import ProductInList from "../ProductInList";
 import "./style.css";
 
 const List = ({
-  productList,
-  storedName,
   token,
   setListIdOriginal,
   setShoeHome,

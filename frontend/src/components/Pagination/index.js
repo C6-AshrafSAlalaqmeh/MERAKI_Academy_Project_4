@@ -5,20 +5,18 @@ import './style.css'
 
 const Pagination = ({postsPerPage ,totalProduct , paginate}) => {
  const pageNumbers = []
- //const [pageNumber, setPageNumber] = useState([])
 
 
- //  useEffect(()=>{/
-   //console.log(totalProduct)
+
+
     
     for(let i= 1; i<= Math.ceil(totalProduct / postsPerPage); i++){
       
         pageNumbers.push(i)
-        //console.log(i)
+       
      }
-     // setPageNumber(pageNumbers)
-  // }, [])
-//  console.log(pageNumber)
+     
+
  
     return (
     <div >
