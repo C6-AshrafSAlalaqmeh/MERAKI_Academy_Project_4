@@ -3,11 +3,12 @@
  <img width=200px height=200px src="https://www.meraki-academy.org/assets/img/logov02.svg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">MERAKI</h3>
+<h3 align="center">Good Food</h3>
 
 ---
 
-<p align="center"> An awesome Project to descripe README 
+<p align="center">Whether you're after an old favourite or inspiration for something new, we have the perfect recipe. Most popular recipe collections .
+
     <br> 
 <a href=''>Demo</a>
     <br> 
