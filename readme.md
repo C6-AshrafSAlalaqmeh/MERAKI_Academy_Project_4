@@ -7,8 +7,7 @@
 
 ---
 
-<p align="center">Whether you're after an old favourite or inspiration for something new, we have the perfect recipe. Most popular recipe collections .
-
+<p align="center"> Whether you're after an old favourite or inspiration for something new, we have the perfect recipe. Most popular recipe collections. 
     <br> 
 <a href=''>Demo</a>
     <br> 
@@ -26,9 +25,10 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+The project is a site for displaying food recipes and there is more than one menu according to the user's desire for the type of food. The site consists of more than one food menu and each menu contains its own food, and inside this food you can see the recipe, ingredients, specific food preparation time, specific cooking time and another feature for each user his own privacy. His page is private and he can keep the foods he needs to see later
 
-Ex. Are you looking for a quick and easy way to action, action, and action? The **(name of application)** is the greatest and most accurate application to do this for you. It helps you to **(list of activities)**. The **(name of application)** provides a simple design to ensure having the best user experience.
+
+
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
