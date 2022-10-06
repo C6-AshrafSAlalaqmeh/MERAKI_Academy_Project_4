@@ -31,7 +31,7 @@
     height: auto;
 }
 .titledetalis{
-    color: yellow;
+    color: white;
     font-size: 25px;
     height: 10px;
     margin-left: 80px;
@@ -78,19 +78,22 @@ margin-right: 300px;
     height: 50px;
     border-radius: 7px;
     border: 0px;
-    background-color: green;
-    color: white;
+    background-color: white;
+    color: black;
     margin-right: 100px;
     cursor: pointer;
 }
 .favorite:hover{
-    background-color: #CEFF1A;
-    color: black;
+    background-color: green;
+    color: white;
     transition:  background-color .9s ;
 }
 .avarageDetalis{
     text-align: center;
     margin-left: 80px;
+}
+.cookdet{
+    color: yellow;
 }
 .stepsAndMethod{
     display: flex;
@@ -119,7 +122,7 @@ margin-right: 300px;
 .ingdet{
     font-size: 25px;
     margin-right: 190px;
-    color: yellow;
+    color: white;
 }
 .steps{
     background-color: rgb(185, 70, 70,0.5);
@@ -142,7 +145,7 @@ margin-right: 300px;
     background: rgb(133, 16, 16 , 0.5);
     align-content: start;
     padding-top: 10px;
-    color: yellow;
+    color: white;
 
   }
   .prep:after {
@@ -183,7 +186,7 @@ margin-right: 300px;
     align-content: start;
     padding-top: 10px;
     /* padding-left: 100px; */
-    color: yellow;
+    color: white;
 
   }
   .cook:after {

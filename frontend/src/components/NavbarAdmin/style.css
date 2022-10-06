@@ -10,12 +10,12 @@
 .storednameadmin{
     margin-top: 10px;
     width: 245px;
-    color: #CEFF1A;
+    color: rgba(226, 250, 7, 0.7);
     height: 20px;
     padding: 10px;
 }
  .welcome{ 
- color: #CEFF1A;
+ color: rgba(226, 250, 7, 0.7);
 
 }
 .navGoodAdmin{

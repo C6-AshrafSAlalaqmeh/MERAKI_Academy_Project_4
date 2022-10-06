@@ -23,14 +23,14 @@
 - [Data Flow](#data_flow)
 - [Guided By](#guided_by)
 
-## 🧐 About <a name = "about"></a>
+## - About <a name = "about"></a>
 
 The project is a site for displaying food recipes and there is more than one menu according to the user's desire for the type of food. The site consists of more than one food menu and each menu contains its own food, and inside this food you can see the recipe, ingredients, specific food preparation time, specific cooking time and another feature for each user his own privacy. His page is private and he can keep the foods he needs to see later
 
 
 
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+## - Getting Started <a name = "getting_started"></a>
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
@@ -68,31 +68,39 @@ npm run dev
 npm run start
 ```
 
-Now app ready to use
+### Now app ready to use  
 
-## 🎈 Usage <a name="usage"></a>
+<br>
+
+
+## - Usage <a name="usage"></a>
 
 
 
-Ex.
+
 - You have to **register** and **Login** to Good Food
-<img width=250px height=200px src="./frontend/public/Register.png" alt="Project logo">
-<img width=250px height=200px src="./frontend/public/login.png" alt="Project logo">
+<img width=250px height=200px src="./frontend/public/Register.png" alt="Project register">
+<img width=250px height=200px src="./frontend/public/login.png" alt="Project Login">
 
 
 - You can click on the **Home** tab provided in the navigation bar to view the home section
-<img width=250px height=200px src="./frontend/public/Home1.png" alt="Project logo">
-<img width=250px height=200px src="./frontend/public/Home2.png" alt="Project logo">
+<img width=250px height=200px src="./frontend/public/Home1.png" alt="Project Home">
+<img width=250px height=200px src="./frontend/public/Home2.png" alt="Project Home">
 
 - You can click on the **The Title of List**  To show special products for this list
-<img width=250px height=200px src="./frontend/public/product.png" alt="Project logo">
+<img width=250px height=200px src="./frontend/public/product.png" alt="Project product">
 
 - You can click on the **The Title of Product**  To show the details for this product
-<img width=250px height=200px src="./frontend/public/detalis.png" alt="Project logo">
+<img width=250px height=200px src="./frontend/public/detalis.png" alt="Project detalis">
 
 - You can click on the button in detalis **Add Fovrite**  To save in list favorite
-<img width=250px height=200px src="./frontend/public/favorite.png" alt="Project logo">
+<img width=250px height=200px src="./frontend/public/favorite.png" alt="Project favorite">
 
+- There is a special page for Admin that can edit and delete products
+<img width=250px height=200px src="./frontend/public/admin1.png" alt="Admin">
+
+- Admin can add new product click at create Product
+<img width=250px height=200px src="./frontend/public/admin2.png" alt="Admin">
 
 
 ## ⛏️ Built Using <a name = "built_using"></a>
@@ -109,7 +117,7 @@ Your trello board link
 
 ## Data Flow <a name = "#data_flow"></a>
 
-<img width=250px height=200px src="./frontend/public/dataflow.png" alt="Project logo"></a>
+<img width=250px height=200px src="./frontend/public/dataflow.png" alt="Project dataFlow"></a>
 
 ## ⚠️ Guided By <a name = "guided_by"></a>
 
