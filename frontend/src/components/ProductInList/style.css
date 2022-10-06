@@ -15,6 +15,7 @@
     background-color: rgba(90, 52, 52, 0.4);
     justify-items: left;
   margin-left: 140px;
+  border: 1px solid green ;
 }
 .pimglsist{
     width: 180px;
@@ -32,7 +33,7 @@
 .ptypefood{
     height: 0px;
     text-align: left;
-    color: aqua;
+    color: white;
 }
 .pava{
  margin-left: 38px;

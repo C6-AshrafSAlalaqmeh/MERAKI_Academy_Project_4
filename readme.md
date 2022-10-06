@@ -81,7 +81,19 @@ Ex.
 
 
 - You can click on the **Home** tab provided in the navigation bar to view the home section
-- You can click on the **Add to cart** button to add this product to your cart but you have to be one of our users, so you should create an account 
+<img width=250px height=200px src="./frontend/public/Home1.png" alt="Project logo">
+<img width=250px height=200px src="./frontend/public/Home2.png" alt="Project logo">
+
+- You can click on the **The Title of List**  To show special products for this list
+<img width=250px height=200px src="./frontend/public/product.png" alt="Project logo">
+
+- You can click on the **The Title of Product**  To show the details for this product
+<img width=250px height=200px src="./frontend/public/detalis.png" alt="Project logo">
+
+- You can click on the button in detalis **Add Fovrite**  To save in list favorite
+<img width=250px height=200px src="./frontend/public/favorite.png" alt="Project logo">
+
+
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
