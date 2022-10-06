@@ -18,7 +18,7 @@ display: flex;
     margin-left: 300px;
     border-radius: 7px;
     margin-bottom: 90px;
-    
+   background-color: rgb(68, 83, 79,0.5);
 }
 .buttonlogReg{
     font-size: 50px;

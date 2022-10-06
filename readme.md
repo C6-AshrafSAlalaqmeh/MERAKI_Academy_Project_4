@@ -53,7 +53,7 @@ git clone https://github.com/your_username_/Project-Name.git
 2. Install packeges repeat this step in backend and frontend folder
 
 ```
-npm i
+npm install
 ```
 
 3. Run server using git bash inside backend folder
@@ -72,10 +72,13 @@ Now app ready to use
 
 ## 🎈 Usage <a name="usage"></a>
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
 
 Ex.
-- You don't have to register to navigate our web app
+- You have to register to our web app
+<img width=200px height=200px src="./frontend/public/Register.png" alt="Project logo">
+
+
 - You can click on the **Home** tab provided in the navigation bar to view the home section
 - You can click on the **Add to cart** button to add this product to your cart but you have to be one of our users, so you should create an account 
 
