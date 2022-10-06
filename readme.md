@@ -75,8 +75,9 @@ Now app ready to use
 
 
 Ex.
-- You have to register to our web app
-<img width=200px height=200px src="./frontend/public/Register.png" alt="Project logo">
+- You have to **register** and **Login** to Good Food
+<img width=250px height=200px src="./frontend/public/Register.png" alt="Project logo">
+<img width=250px height=200px src="./frontend/public/login.png" alt="Project logo">
 
 
 - You can click on the **Home** tab provided in the navigation bar to view the home section
