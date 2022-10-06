@@ -11,7 +11,7 @@ const Detalis = ({
   titleProduct,
   admin,
 }) => {
-  console.log(productDetalis);
+  
   const stars = {
     size: 25,
     value: productDetalis.avarage,

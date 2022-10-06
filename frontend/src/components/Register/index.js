@@ -26,7 +26,7 @@ const buttonregister =()=>{
   .then((result)=>{
   setMessage(result.data.message)
   setShowMessage(true)
-  navigate('/login')
+  // navigate('/login')
   })
   .catch((err)=>{
 
@@ -45,19 +45,19 @@ const buttonregister =()=>{
       </div>
   <div className="contanirReg">
   <div className="titleRegister">
-  <h2>Register :</h2>
+  <h2 className="wordReg">Register :</h2>
   </div>
   <div className="inputsRegister">
-    <input type='text' placeholder="First Name" onChange={(e)=>{setFirstName(e.target.value)}}/>
-    <input type='text' placeholder="Last Name" onChange={(e)=>{setLastName(e.target.value)}}/>
-    <input type='number' placeholder="Phone Number" onChange={(e)=>{setPhone(e.target.value)}}/>
-    <input type='text' placeholder="Country" onChange={(e)=>{setCountry(e.target.value)}}/>
-    <input onClick={()=>{setShowMessage(false)}} type='email' placeholder="Email" onChange={(e)=>{setEmail(e.target.value)}}/>
-    <input type='password' placeholder="Password" onChange={(e)=>{setPassword(e.target.value)}}/>
+    <input className="inputReg" type='text' placeholder="First Name" onChange={(e)=>{setFirstName(e.target.value)}}/>
+    <input className="inputReg" type='text' placeholder="Last Name" onChange={(e)=>{setLastName(e.target.value)}}/>
+    <input className="inputReg" type='number' placeholder="Phone Number" onChange={(e)=>{setPhone(e.target.value)}}/>
+    <input className="inputReg" type='text' placeholder="Country" onChange={(e)=>{setCountry(e.target.value)}}/>
+    <input className="inputReg" onClick={()=>{setShowMessage(false)}} type='email' placeholder="Email" onChange={(e)=>{setEmail(e.target.value)}}/>
+    <input className="inputReg" type='password' placeholder="Password" onChange={(e)=>{setPassword(e.target.value)}}/>
     </div>
     <div >
      <button className="buttonRegister" onClick={buttonregister}> Register</button>
-     </div>
+     </div >
     {showMessage && <div className="message">{message}</div> }
     </div>
     </div>

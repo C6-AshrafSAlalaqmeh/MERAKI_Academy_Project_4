@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 import ReactStars from 'react-rating-stars-component';
-import Pagination from "../Pagination";
+
 
 
 const Products = ({
@@ -150,7 +150,7 @@ const count= []
       <div className="products">
         {ProductItem.length &&
           ProductItem.map((elem) => {
-            console.log(elem);
+           
             const stars = {
               size: 25,
               value: elem.avarage,
@@ -160,7 +160,7 @@ const count= []
             // console.log(listidOriginal);
             // console.log(elem.listId.typeFood);
             if (listidOriginal === elem.listId._id || listidOriginal === elem.listId) {
-              console.log(elem);
+          
               return (
                 <div className="itemProduct">
                   <div className="imgProduct">

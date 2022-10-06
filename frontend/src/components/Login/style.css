@@ -49,6 +49,7 @@ width: 400px;
 height: 100px;
 gap: 10px;
 margin-left: 110px;
+
 }
 
 /* .divButtonLogin{
@@ -65,7 +66,14 @@ margin-left: 110px;
     cursor: pointer;
     
 }
-
+.inputEmail{
+    border-radius: 7px;
+    padding: 8px;
+}
+.inputPassword{
+    border-radius: 7px;
+    padding: 8px;
+}
 .ButtonLogin:hover{
     /* transform:scale(1.08 );  */
     /* transition: transform .5s ; */

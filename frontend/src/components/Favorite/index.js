@@ -65,7 +65,7 @@ const getFavorite =()=>{
     <div className='backgroundfavorite'>
     <div className='contanirfavorite'>
   {favoriteItem && favoriteItem.map((elem)=>{
-    console.log(elem)
+    
     const stars = {
       size: 25,
       value: elem.itemid.avarage,

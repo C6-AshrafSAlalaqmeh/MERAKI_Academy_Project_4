@@ -35,7 +35,7 @@
     font-size: 25px;
     height: 10px;
     margin-left: 80px;
-    width: 300px;
+    width: 295px;
 }
 .tiltleDetaliss{
     color: green;
@@ -85,8 +85,8 @@ margin-right: 300px;
 }
 .favorite:hover{
     background-color: #CEFF1A;
-  
-    transition:  background-color .5s ;
+    color: black;
+    transition:  background-color .9s ;
 }
 .avarageDetalis{
     text-align: center;

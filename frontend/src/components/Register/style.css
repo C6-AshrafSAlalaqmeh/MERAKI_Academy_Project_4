@@ -7,7 +7,7 @@
 }
 .contanirReg{
     width: 600px;
-    height: 400px;
+    height: 520px;
     display: grid;
     border-radius: 7px;
     border: 1px solid;
@@ -28,6 +28,10 @@
     margin-left: 100px;
     
 }
+.wordReg{
+    font-size: 35px;
+    height: 0px;
+}
 .reginreg{
     color: yellow;
     text-decoration: none;
@@ -36,11 +40,15 @@
 .inputsRegister{
     display: grid;
     width: 400px;
-    height: 230px;
+    height: 290px;
     margin-left: 120px;
     gap: 10px;
-    
-    
+    padding: 10px;
+}
+.inputReg{
+    border-radius: 8px;
+    height: 28px;
+    padding: 5px;
 }
 .titleRegister{
     justify-self: left;
@@ -55,6 +63,8 @@
     border: 0px;
     background-color: rgb(26, 175, 143);
     cursor: pointer;
+    margin-top: 15px;
+    margin-left: 40px;
     
     
 }
@@ -63,4 +73,7 @@
     transition: transform .5s ;
     background-color: rgb(153, 79, 223);
     transition:  background-color .5s ;
+}
+.message{
+    justify-content: center;
 }

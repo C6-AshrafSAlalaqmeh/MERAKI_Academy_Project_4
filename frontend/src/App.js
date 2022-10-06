@@ -9,12 +9,12 @@ import List from "./components/List";
 import Products from "./components/Products";
 import Detalis from "./components/Detalis";
 import AddProduct from "./components/AddProduct";
-import NameUser from "./components/NameUser";
+
 import Favorite from "./components/Favorite";
-import Admin from "./components/Admin";
+
 import NavbarAdmin from "./components/NavbarAdmin";
-import NavbarGeneral from "./components/NabarGeneral";
-import ProductInList from "./components/ProductInList";
+
+
 
 function App() {
   const [ShowHome, setShoeHome] = useState(true);
@@ -81,17 +81,8 @@ function App() {
       {/* {showName && <NameUser storedName={storedName}/>}   */}
 
       <Routes>
-         {/* <Route
-          path="/productinlist"
-          element={
-            <ProductInList
-            typeFood={typeFood} />
-          }
-        />  */}
-        <Route
-          path="/admin"
-          element={<Admin setHidenavbaradmin={setHidenavbaradmin} />}
-        />
+         
+        
 
         <Route path="/home" element={<Home />} />
 

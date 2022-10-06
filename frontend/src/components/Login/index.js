@@ -21,7 +21,7 @@ const Login = ({
   setshowNavbar,
   setToken,
 }) => {
-  
+  // setShowMessage(false);
   setShoeHome(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -44,10 +44,11 @@ const Login = ({
           setUserId(result.data.userId);
           setstoredName(result.data.firstName);
           setShowName(true);
+          
           navigate("/list");
           
         } else {
-          console.log(result.data.userId);
+          
           setUserId(result.data.userId);
           setToken(result.data.Token);
 
@@ -55,7 +56,7 @@ const Login = ({
           setstoredName(result.data.firstName);
 
           setShowName(true);
-          console.log(UserId);
+          
           setshowNavbargeneral(false);
           setHidenavbaradmin(false);
           setHideNavbarUser(true);
@@ -77,7 +78,7 @@ const Login = ({
       </div>
     <div className="containerLogin">
       <div className="titleLogin">
-        <h1>Login :</h1>
+        <h1 className="wordReg">Login :</h1>
       </div>
       <div className="inputLogin">
         <input
