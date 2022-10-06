@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://www.meraki-academy.org/assets/img/logov02.svg" alt="Project logo"></a>
+<img width=250px height=200px src="./frontend/public/goodfood.jpg" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Good Food</h3>
