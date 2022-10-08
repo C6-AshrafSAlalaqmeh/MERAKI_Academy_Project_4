@@ -49,15 +49,21 @@ const List = ({
                   <h1
                     className="titlist"
                     onClick={() => {
-                      navigate("/product");
                       setListIdOriginal(elem._id);
                       setTitleList(elem.typeFood);
+                      navigate("/product");
+                     
                     }}
                   >
                     {elem.typeFood}
                   </h1>
                 </div>
-                <img className="imagList" src={`${elem.img}`} />
+                <img  onClick={() => {
+                      setListIdOriginal(elem._id);
+                      setTitleList(elem.typeFood);
+                      navigate("/product");
+                     
+                    }} className="imagList" src={`${elem.img}`} />
               </div>
             );
           })}
@@ -67,7 +73,9 @@ const List = ({
       </div> */}
     
     { UserId !== admin &&  <ProductInList />}
-    </div>
+   
+</div>
+   
   );
 };
 export default List;

@@ -30,7 +30,7 @@ const Navbar = ({
     axios
       .get(`http://localhost:5000/product/search?name=${inputSearch}`)
       .then((result) => {
-         console.log(result.data.Product);
+         
         setProducts(result.data.Product);
       })
       .catch((err) => {
@@ -44,7 +44,7 @@ const Navbar = ({
     setShowCreateProduct(false);
     setHideNavbarUser(false);
     setHidenavbaradmin(false);
-    setshowNavbargeneral(true);
+    
 
     setToken("");
     navigate("/home");
@@ -54,7 +54,7 @@ const Navbar = ({
       <div className="containNav">
         <div>
       <div className='nameUser'>
-      <h1 className="storedname"><span className="welcome"> Welcome : </span>{`${storedName}`}</h1>
+      <h1 className="storedname"><span className="welcome"> Welcome  </span>{`${storedName}`}</h1>
       </div>
         <div className="divnavGood">
           <h2 className="navGood">

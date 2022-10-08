@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./style.css";
 import ReactStars from "react-rating-stars-component";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Detalis = ({
   setidFavorite,
@@ -12,6 +13,7 @@ const Detalis = ({
   admin,
 }) => {
   
+  const navigate = useNavigate()
   const stars = {
     size: 25,
     value: productDetalis.avarage,
@@ -42,10 +44,11 @@ const Detalis = ({
   };
 
   return (
+    <>
     <div className="backgroundDetalis">
-      <div className="big">
+      {/* <div className="big">
         <h1 className="tiltleDetaliss">{`${titleProduct}`}</h1>
-      </div>
+      </div> */}
       <div className="contanirDetalis">
         <div className="itemDetalis">
           <div className="divimgDetalis">
@@ -108,7 +111,12 @@ const Detalis = ({
           </div>
         </div>
       </div>
+      
     </div>
+    <div>
+    <button className="buttonback" onClick={()=>navigate(-1)}>Back</button>
+  </div>
+    </>
   );
 };
 

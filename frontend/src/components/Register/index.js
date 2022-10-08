@@ -55,7 +55,7 @@ const Register = ({
       </div>
       <div className="contanirReg">
         <div className="titleRegister">
-          <h2 className="wordReg">Register :</h2>
+          <h2 className="wordReg">Register:</h2>
         </div>
         <div className="inputsRegister">
           <input

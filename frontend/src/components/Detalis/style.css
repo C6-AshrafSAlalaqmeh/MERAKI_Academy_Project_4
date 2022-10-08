@@ -13,7 +13,7 @@
     grid-template-columns: repeat(2 , 450px);
     justify-content: center;
     margin-left: 110px;
-    
+    margin-top: 40px;
    
    
     
@@ -21,28 +21,29 @@
 
 .itemDetalis{
     border: 1px solid;
-    width: 730px;
+    width: 750px;
     display: grid;
     grid-template-columns: repeat(2 , 250px);
     height: 650px;
     margin-top: 10px;
-    background-color: rgb(68, 83, 79,0.7);
+    /* background-color: rgb(68, 83, 79,0.7); */
     /* background-color: rgb(168, 67, 67,0.9); */
     height: auto;
 }
 .titledetalis{
-    color: white;
+    color: rgba(0, 0, 0, 0.822);
     font-size: 25px;
     height: 10px;
     margin-left: 80px;
-    width: 295px;
+    width: 320px;
+    font-weight: bold;
 }
 .tiltleDetaliss{
-    color: green;
+    color: #B1740F;
    margin-left: 500px;
     /* height: 10px; */
     
-    width: 300px;
+    width: 390px;
 }
 
 .titleAndbuttondetail{
@@ -78,13 +79,13 @@ margin-right: 300px;
     height: 50px;
     border-radius: 7px;
     border: 0px;
-    background-color: white;
+    background-color: #B1740F;
     color: black;
     margin-right: 100px;
     cursor: pointer;
 }
 .favorite:hover{
-    background-color: green;
+    background-color: rgb(228, 186, 72);
     color: white;
     transition:  background-color .9s ;
 }
@@ -125,14 +126,14 @@ margin-right: 300px;
     color: white;
 }
 .steps{
-    background-color: rgb(185, 70, 70,0.5);
+    background-color: rgb(177, 116, 15,0.8);
     border-radius: 10px;
     padding: 10px;
     color: white;
     
 }
 .meth{
-    background-color: rgb(185, 70, 70,0.5);
+    background-color: rgb(177, 116, 15,0.8);
     border-radius: 10px;
     padding: 10px;
     color: rgb(255, 255, 244);
@@ -142,7 +143,7 @@ margin-right: 300px;
     width: 200px;
     height: 30px;
     position: relative;
-    background: rgb(133, 16, 16 , 0.5);
+    background: rgb(177, 116, 15,0.8);
     align-content: start;
     padding-top: 10px;
     color: white;
@@ -168,7 +169,7 @@ margin-right: 300px;
     width: 0;
     height: 0;
     
-    border-left: 20px solid rgb(133, 16, 16 , 0.3);
+    border-left: 20px solid rgb(177, 116, 15,0.5);
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
   }
@@ -182,7 +183,7 @@ margin-right: 300px;
     width: 200px;
     height: 30px;
     position: relative;
-    background: rgb(133, 16, 16 , 0.5);
+    background: rgb(177, 116, 15,0.8);
     align-content: start;
     padding-top: 10px;
     /* padding-left: 100px; */
@@ -209,7 +210,23 @@ margin-right: 300px;
     bottom: 0;
     width: 0;
     height: 0;
-    border-left: 20px solid rgb(133, 16, 16 , 0.3);
+    border-left: 20px solid rgb(177, 116, 15,0.5);
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
   }
+  .buttonback{
+    margin-right: 1100px;
+    width: 100px;
+    height: 50px;
+    border-radius: 7px;
+    border: 0px;
+    background-color: #B1740F;
+    color: black;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .buttonback:hover{
+    background-color: rgb(228, 186, 72);
+    color: white;
+    transition:  background-color .9s ;
+}

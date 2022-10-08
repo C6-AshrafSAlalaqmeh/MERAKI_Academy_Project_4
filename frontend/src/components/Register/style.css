@@ -20,8 +20,10 @@
 .buttonlogReginreg{
     font-size: 50px;
     display: grid;
-    margin-bottom: 220px;
+    margin-bottom: 0px;
     text-align: left;
+    margin-left: 110px;
+    gap: 20px;
 }
 .loginreg{
     color: yellow;
@@ -66,13 +68,13 @@
     cursor: pointer;
     margin-top: 15px;
     margin-left: 40px;
-    
+    color:rgb(95, 67, 13);
     
 }
 
 .buttonRegister:hover{
     transition: transform .5s ;
-    background-color: rgb(153, 79, 223);
+    background-color: rgb(79, 113, 223);
     transition:  background-color .5s ;
     color: white;
 }

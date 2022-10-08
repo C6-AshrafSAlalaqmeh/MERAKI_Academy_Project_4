@@ -7,16 +7,29 @@
     display: flex;
     gap: 40px;
     justify-content: center;
+    width: 1300px;
+    
 }
 .loggeneral{
-margin-top: 140px;
+margin-top: 440px;
 text-decoration: none;
 color: rgb(203, 241, 64);
 font-size: 40px;
+
 }
 .reggeneral{
-    margin-top: 140px;
+    margin-top: 440px;
     text-decoration: none;
     color: rgb(203, 241, 64);
     font-size: 40px;
+    
 }
+.wordhome{
+    color: white;
+    width: 500px;
+    margin-left: 430px;
+    margin-top: 50px;
+    background-color: rgb(70, 41, 41 , 0.7);
+  border-radius: 10px;
+}
+

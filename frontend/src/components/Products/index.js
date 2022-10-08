@@ -132,7 +132,12 @@ const [productlength, setProductlength] = useState([])
               return (
                 <div className="itemProduct">
                   <div className="imgProduct">
-                    <img className="pimg" src={`${elem.img}`} />
+                    <img  onClick={() => {
+                        navigate("/detalis");
+                        setTitleProduct(elem.nameFood);
+                        setShowCreateProduct(false);
+                        setProductDetalis(elem);
+                      }} className="pimg" src={`${elem.img}`} />
                   </div>
                   <div className="titAndAvarageAnddesc">
                     <p

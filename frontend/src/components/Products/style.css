@@ -28,7 +28,7 @@
 .itemProduct{
     /* margin-right: 500px; */
     border: 2px solid;
-    width: 410px;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2,50px);
     row-gap: 0px;
@@ -36,14 +36,20 @@
     height: 294px;
     border-style: outset;
     /* background-color: rgba(90, 52, 52, 0.6); */
-    background-color: rgba(90, 52, 52, 0.4);
+    /* background-color: rgba(90, 52, 52, 0.4); */
     border-radius: 10px;
-
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+     
 }
+.itemProduct:hover {
+    box-shadow: 10px 10px 16px 10px rgba(0,0,0,0.2);
+  }
 .imgProduct{
     width: 180px;
     /* border: 1px solid; */
     border-radius: 10px;
+    cursor: pointer;
 }
 .pimg{
     width: 185px;
@@ -67,7 +73,7 @@
     width: 230px;
     text-align: left;
     /* color: rgb(97, 97, 18); */
-    color: white;
+    color: #B1740F;
     font-size: 25px;
     height: 50px;
 }
